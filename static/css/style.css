@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0.9375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -458,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .nav-container {
-    padding: 0 1rem;
+    padding: 0 0.9375rem;
   }
 }
 
@@ -483,7 +483,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .nav-container {
-    padding: 0 0.75rem;
+    padding: 0 0.9375rem;
     gap: 1rem;
   }
   
