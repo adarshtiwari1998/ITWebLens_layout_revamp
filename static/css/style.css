@@ -181,10 +181,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-logo {
-  height: 50px;
+  height: 65px;
   width: auto;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Navigation Pills */
@@ -488,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .brand-logo {
-    height: 45px;
+    height: 55px;
   }
   
   .brand-link {
