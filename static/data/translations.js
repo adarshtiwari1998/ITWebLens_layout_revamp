@@ -354,6 +354,13 @@ window.translations = {
             }
         },
         
+        // CTA Section
+        cta: {
+            title: "Ready to experience smarter & more accurate AI answers?",
+            subtitle: "Gain an edge with our exclusive services, designed to provide you with tailored insights and guidance across every industry and subject.",
+            button: "Get Started Now"
+        },
+        
         // Meta and SEO
         meta: {
             description: "ITWEBLENS - Leading IT Services and Web Development Agency. We help businesses grow with cutting-edge technology solutions including React, Node.js, Shopify, and more."
