@@ -1968,27 +1968,65 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Logo Styles - Enhanced for new logo */
-.navbar-brand .logo,
-.footer-logo {
+/* Logo Styles - Modern 2030 Standards (Google-inspired sizing) */
+.navbar-logo {
+  height: 32px;
+  width: auto;
+  max-width: 120px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   transition: all 0.3s ease;
-  max-width: 100%;
-  height: auto;
+  object-fit: contain;
 }
 
-[data-theme="dark"] .navbar-brand .logo,
+.footer-logo {
+  height: 45px;
+  width: auto;
+  max-width: 150px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Dark mode logo effects */
+[data-theme="dark"] .navbar-logo,
 [data-theme="dark"] .footer-logo {
   filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
 }
 
-.navbar-brand .logo:hover {
+/* Hover effects */
+.navbar-logo:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 4px 8px rgba(33, 150, 243, 0.3));
 }
 
-[data-theme="dark"] .navbar-brand .logo:hover {
+[data-theme="dark"] .navbar-logo:hover {
   filter: drop-shadow(0 4px 8px rgba(33, 150, 243, 0.5));
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 28px;
+    max-width: 100px;
+  }
+  
+  .footer-logo {
+    height: 40px;
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    height: 24px;
+    max-width: 85px;
+  }
+  
+  .footer-logo {
+    height: 35px;
+    max-width: 110px;
+  }
 }
 
 /* Dark Mode Text Fixes */
@@ -2004,11 +2042,6 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-theme="dark"] .futuristic-footer h6 {
   color: var(--text-primary) !important;
-}
-
-/* Footer logo specific styling */
-.footer-logo {
-  margin-bottom: 1rem;
 }
 
 [data-theme="dark"] .footer-logo {
