@@ -17,8 +17,8 @@
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   
   /* Typography */
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Space Grotesk', sans-serif;
+  --font-primary: 'Sora', sans-serif;
+  --font-secondary: 'Sora', sans-serif;
   
   /* Spacing */
   --section-padding: 100px 0;
@@ -48,6 +48,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: var(--primary-bg, #ffffff);
+  color: var(--text-primary, #1a1a1a);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Tagline Badge */
