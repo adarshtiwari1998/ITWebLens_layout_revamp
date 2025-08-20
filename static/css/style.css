@@ -633,6 +633,60 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
+/* Light Mode Why Choose Us Section */
+[data-theme="light"] .why-choose-us {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+}
+
+[data-theme="light"] .why-choose-us .section-title,
+[data-theme="light"] .why-choose-us .section-subtitle {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .feature-item {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(33, 150, 243, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .feature-item:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(33, 150, 243, 0.2);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.15);
+}
+
+[data-theme="light"] .feature-content h5 {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .feature-content p {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .stat-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(33, 150, 243, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .stat-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(33, 150, 243, 0.2);
+  box-shadow: 0 15px 30px rgba(33, 150, 243, 0.15);
+}
+
+[data-theme="light"] .stat-number {
+  color: var(--primary-blue);
+}
+
+[data-theme="light"] .stat-label {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .stat-icon {
+  color: var(--primary-blue);
+}
+
 .service-card::before {
   content: '';
   position: absolute;
