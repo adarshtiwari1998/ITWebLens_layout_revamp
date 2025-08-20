@@ -63,55 +63,71 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top futuristic-nav" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="{{ url_for('static', filename='images/logo-full.png') }}" alt="ITWEBLENS" class="navbar-logo">
-            </a>
+    <!-- Modern 2030+ Navigation -->
+    <nav class="modern-nav fixed-top" id="mainNav">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <div class="nav-brand">
+                <a href="/" class="brand-link">
+                    <img src="{{ url_for('static', filename='images/logo-full.png') }}" alt="ITWEBLENS" class="brand-logo">
+                </a>
+            </div>
             
-            <div class="navbar-controls d-flex align-items-center">
-                <!-- Language Switcher -->
-                <div class="language-switcher me-3">
-                    <select id="languageSelect" class="form-select form-select-sm">
-                        <option value="en">English</option>
-                        <option value="ja">日本語</option>
-                        <option value="hi">हिंदी</option>
-                    </select>
+            <!-- Main Navigation Pills -->
+            <div class="nav-center">
+                <div class="nav-pills-container">
+                    <div class="nav-pills">
+                        <a href="/" class="nav-pill" data-translate="nav.home">Home</a>
+                        <a href="/services" class="nav-pill" data-translate="nav.services">Services</a>
+                        <a href="/portfolio" class="nav-pill" data-translate="nav.portfolio">Portfolio</a>
+                        <a href="/about" class="nav-pill" data-translate="nav.about">About</a>
+                        <a href="/team" class="nav-pill" data-translate="nav.team">Team</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Controls -->
+            <div class="nav-controls">
+                <!-- Language & Theme Group -->
+                <div class="control-group">
+                    <div class="language-switcher-modern">
+                        <select id="languageSelect" class="lang-select">
+                            <option value="en">EN</option>
+                            <option value="ja">JP</option>
+                            <option value="hi">HI</option>
+                        </select>
+                    </div>
+                    <button class="theme-toggle-modern" id="themeToggle">
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </div>
                 
-                <!-- Theme Toggle -->
-                <button class="theme-toggle me-3" id="themeToggle">
-                    <i class="fas fa-sun"></i>
-                </button>
+                <!-- CTA Button -->
+                <div class="nav-cta">
+                    <a href="/contact" class="cta-button" data-translate="nav.get_started">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
                 
-                <!-- Mobile Menu Toggle -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- Mobile Menu -->
+                <button class="mobile-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
             
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/" data-translate="nav.home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/services" data-translate="nav.services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/portfolio" data-translate="nav.portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about" data-translate="nav.about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/team" data-translate="nav.team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact" data-translate="nav.contact">Contact</a>
-                    </li>
-                </ul>
+            <!-- Mobile Navigation -->
+            <div class="collapse mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <a href="/" class="mobile-nav-link" data-translate="nav.home">Home</a>
+                    <a href="/services" class="mobile-nav-link" data-translate="nav.services">Services</a>
+                    <a href="/portfolio" class="mobile-nav-link" data-translate="nav.portfolio">Portfolio</a>
+                    <a href="/about" class="mobile-nav-link" data-translate="nav.about">About</a>
+                    <a href="/team" class="mobile-nav-link" data-translate="nav.team">Team</a>
+                    <a href="/contact" class="mobile-nav-link cta-mobile" data-translate="nav.contact">Contact Us</a>
+                </div>
             </div>
         </div>
     </nav>

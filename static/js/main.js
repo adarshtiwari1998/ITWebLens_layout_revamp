@@ -56,27 +56,43 @@ function initBackToTop() {
 
 // Navbar functionality
 function initNavbar() {
-    const navbar = document.querySelector('.navbar');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbar = document.querySelector('.modern-nav');
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
     
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navbarCollapse.classList.contains('show')) {
-                navbarToggler.click();
+    if (mobileToggle && mobileNav) {
+        // Mobile menu toggle
+        mobileToggle.addEventListener('click', function() {
+            mobileNav.classList.toggle('show');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('show');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navbar.contains(event.target);
+            const isNavOpen = mobileNav.classList.contains('show');
+            
+            if (!isClickInsideNav && isNavOpen) {
+                mobileNav.classList.remove('show');
             }
         });
-    });
+    }
     
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = navbar.contains(event.target);
-        const isNavOpen = navbarCollapse.classList.contains('show');
-        
-        if (!isClickInsideNav && isNavOpen) {
-            navbarToggler.click();
+    // Add active state to current page nav pill
+    const currentPath = window.location.pathname;
+    const navPills = document.querySelectorAll('.nav-pill');
+    
+    navPills.forEach(pill => {
+        const href = pill.getAttribute('href');
+        if (href === currentPath || (currentPath === '/' && href === '/')) {
+            pill.classList.add('active');
         }
     });
 }
