@@ -2331,7 +2331,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta-section {
   position: relative;
   padding: 120px 0;
-  background: #0a0f1c;
+  background: transparent;
   overflow: hidden;
   transition: all 0.6s ease;
 }
@@ -2548,7 +2548,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Light Theme Styles */
 [data-theme="light"] .cta-section {
-  background: #f8fafc;
+  background: transparent;
 }
 
 [data-theme="light"] .cta-title {
