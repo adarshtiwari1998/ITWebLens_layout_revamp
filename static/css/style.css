@@ -2472,15 +2472,43 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffa502 !important;
 }
 
-/* Project Modal - 2030+ Design */
+/* Project Modal - True 2030+ Futuristic Design */
+.project-modal {
+  z-index: 9999;
+}
+
+.project-modal .modal-dialog {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
 .project-modal .modal-content {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)) !important;
-  backdrop-filter: blur(25px) !important;
-  border: 1px solid rgba(148, 163, 184, 0.2) !important;
-  border-radius: 25px !important;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 100px rgba(33, 150, 243, 0.1) !important;
+  background: linear-gradient(145deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(30, 41, 59, 0.92) 50%, 
+    rgba(15, 23, 42, 0.95) 100%) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  border-radius: 24px !important;
+  box-shadow: 
+    0 32px 64px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(34, 197, 94, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
   position: relative;
   overflow: hidden;
+  transform: translateY(0);
+  animation: modalSlideIn 0.4s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .project-modal .modal-content::before {
@@ -2489,79 +2517,158 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #2196F3, #9C27B0, #4CAF50, #2196F3);
-  background-size: 200% 100%;
-  animation: gradientShift 3s ease-in-out infinite;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    #22c55e 0%, 
+    #06b6d4 25%, 
+    #8b5cf6 50%, 
+    #f59e0b 75%, 
+    #22c55e 100%);
+  background-size: 300% 100%;
+  animation: neonFlow 4s ease-in-out infinite;
 }
 
-@keyframes gradientShift {
+.project-modal .modal-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(34, 197, 94, 0.03) 50%, 
+    transparent 70%);
+  pointer-events: none;
+  animation: shimmerEffect 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonFlow {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
+@keyframes shimmerEffect {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(100%) skewX(-15deg); }
+}
+
 .project-modal .modal-header {
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2) !important;
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(156, 39, 176, 0.15)) !important;
-  border-radius: 25px 25px 0 0 !important;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.2) !important;
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.15) 0%, 
+    rgba(139, 92, 246, 0.12) 50%, 
+    rgba(34, 197, 94, 0.15) 100%) !important;
+  border-radius: 24px 24px 0 0 !important;
   position: relative;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
+  z-index: 2;
 }
 
 .project-modal .modal-header::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 10%;
+  right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(33, 150, 243, 0.5), transparent);
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(34, 197, 94, 0.6) 20%, 
+    rgba(139, 92, 246, 0.6) 50%, 
+    rgba(34, 197, 94, 0.6) 80%, 
+    transparent);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
 }
 
 .project-modal .modal-title {
-  background: linear-gradient(135deg, #2196F3, #9C27B0, #4CAF50) !important;
-  background-size: 200% 200% !important;
+  background: linear-gradient(135deg, 
+    #22c55e 0%, 
+    #06b6d4 30%, 
+    #8b5cf6 60%, 
+    #22c55e 100%) !important;
+  background-size: 300% 300% !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  font-weight: 700 !important;
-  font-size: 1.6rem !important;
-  animation: titleGlow 2s ease-in-out infinite alternate;
-  text-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+  font-weight: 800 !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 0.5px;
+  animation: titlePulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4));
+  margin: 0;
 }
 
-@keyframes titleGlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+@keyframes titlePulse {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4));
+  }
+  50% { 
+    background-position: 100% 50%; 
+    filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.6));
+  }
 }
 
 .project-modal .btn-close {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(244, 63, 94, 0.2)) !important;
-  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  background: linear-gradient(135deg, 
+    rgba(239, 68, 68, 0.25), 
+    rgba(244, 63, 94, 0.25)) !important;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important;
   border-radius: 50% !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
   filter: none !important;
-  color: #ef4444 !important;
-  transition: all 0.3s ease !important;
-  backdrop-filter: blur(10px) !important;
-  width: 35px !important;
-  height: 35px !important;
+  color: #ff4757 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(15px) !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2) !important;
 }
 
 .project-modal .btn-close:hover {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(244, 63, 94, 0.3)) !important;
-  transform: scale(1.1) !important;
-  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3) !important;
+  background: linear-gradient(135deg, 
+    rgba(239, 68, 68, 0.4), 
+    rgba(244, 63, 94, 0.4)) !important;
+  transform: scale(1.15) rotate(90deg) !important;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4) !important;
+  border-color: rgba(255, 71, 87, 0.6) !important;
+}
+
+.modal-body {
+  padding: 1.5rem 2rem 2rem !important;
+  position: relative;
+  z-index: 2;
+}
+
+.modal-project-image {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(145deg, 
+    rgba(34, 197, 94, 0.05), 
+    rgba(139, 92, 246, 0.03));
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .modal-project-image img {
   width: 100% !important;
-  height: 200px !important;
+  height: 180px !important;
   object-fit: contain !important;
-  border-radius: 15px !important;
-  margin-bottom: 1.5rem !important;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.modal-project-image:hover img {
+  transform: scale(1.02);
 }
 
 .modal-project-info h4 {
@@ -2572,16 +2679,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .info-grid {
   display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 1rem !important;
-  margin: 1.5rem 0 !important;
-  padding: 1.5rem !important;
-  background: linear-gradient(145deg, rgba(33, 150, 243, 0.08), rgba(156, 39, 176, 0.05)) !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(148, 163, 184, 0.2) !important;
-  backdrop-filter: blur(15px) !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0.8rem !important;
+  margin: 1.2rem 0 !important;
+  padding: 1.2rem !important;
+  background: linear-gradient(145deg, 
+    rgba(34, 197, 94, 0.08) 0%, 
+    rgba(139, 92, 246, 0.06) 50%, 
+    rgba(34, 197, 94, 0.08) 100%) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(34, 197, 94, 0.25) !important;
+  backdrop-filter: blur(20px) saturate(150%) !important;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .info-grid::before {
@@ -2591,75 +2702,168 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(33, 150, 243, 0.1), transparent);
-  animation: shimmer 3s ease-in-out infinite;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(34, 197, 94, 0.1) 20%, 
+    rgba(139, 92, 246, 0.08) 50%, 
+    rgba(34, 197, 94, 0.1) 80%, 
+    transparent);
+  animation: infoShimmer 4s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+@keyframes infoShimmer {
+  0%, 100% { transform: translateX(-100%) skewX(-20deg); opacity: 0; }
+  50% { transform: translateX(100%) skewX(-20deg); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .info-item {
   display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  font-size: 0.9rem !important;
+  flex-direction: column !important;
+  gap: 0.3rem !important;
+  padding: 0.8rem !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(34, 197, 94, 0.15) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-item:hover {
+  background: rgba(34, 197, 94, 0.08) !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15) !important;
 }
 
 .info-item strong {
-  color: var(--text-secondary) !important;
+  color: rgba(34, 197, 94, 0.9) !important;
   font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+.info-item span {
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
 }
 
 .modal-technologies {
-  margin: 1.5rem 0 !important;
+  margin: 1.2rem 0 !important;
 }
 
 .modal-technologies h6 {
   color: var(--text-primary) !important;
   margin-bottom: 0.8rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  background: linear-gradient(135deg, #22c55e, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .tech-tags {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 0.5rem !important;
+  gap: 0.6rem !important;
+}
+
+.tech-tags .tech-tag {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.15), 
+    rgba(139, 92, 246, 0.1)) !important;
+  color: rgba(34, 197, 94, 0.9) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 12px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.tech-tags .tech-tag:hover {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.25), 
+    rgba(139, 92, 246, 0.2)) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2) !important;
 }
 
 .btn-view-project {
-  background: var(--gradient-primary) !important;
+  background: linear-gradient(135deg, 
+    #22c55e 0%, 
+    #06b6d4 50%, 
+    #8b5cf6 100%) !important;
   border: none !important;
-  padding: 0.8rem 1.5rem !important;
-  border-radius: 25px !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important;
+  padding: 0.7rem 1.4rem !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   text-decoration: none !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
   color: white !important;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-view-project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-view-project:hover::before {
+  left: 100%;
 }
 
 .btn-view-project:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4) !important;
   color: white !important;
 }
 
 .modal-description h6 {
   color: var(--text-primary) !important;
   font-weight: 700 !important;
-  margin-bottom: 1rem !important;
-  font-size: 1.1rem !important;
+  margin-bottom: 0.8rem !important;
+  font-size: 1rem !important;
+  background: linear-gradient(135deg, #22c55e, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .modal-description p {
   color: var(--text-secondary) !important;
-  line-height: 1.7 !important;
-  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem;
 }
 
 /* IT Services Placeholder Styling */
@@ -2752,16 +2956,55 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+/* Light Mode Modal Adjustments */
+[data-theme="light"] .project-modal .modal-content {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(248, 250, 252, 0.92) 50%, 
+    rgba(255, 255, 255, 0.95) 100%) !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+  box-shadow: 
+    0 32px 64px rgba(0, 0, 0, 0.15),
+    0 0 80px rgba(34, 197, 94, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="light"] .project-modal .modal-header {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.1) 0%, 
+    rgba(139, 92, 246, 0.08) 50%, 
+    rgba(34, 197, 94, 0.1) 100%) !important;
+  border-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+[data-theme="light"] .info-grid {
+  background: linear-gradient(145deg, 
+    rgba(248, 250, 252, 0.8), 
+    rgba(241, 245, 249, 0.9)) !important;
+  border-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+[data-theme="light"] .info-item {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border-color: rgba(34, 197, 94, 0.15) !important;
+}
+
+[data-theme="light"] .info-item:hover {
+  background: rgba(34, 197, 94, 0.05) !important;
+  border-color: rgba(34, 197, 94, 0.25) !important;
+}
+
+[data-theme="light"] .modal-project-image {
+  background: linear-gradient(145deg, 
+    rgba(248, 250, 252, 0.8), 
+    rgba(241, 245, 249, 0.9));
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
 /* Light Mode Adjustments */
 [data-theme="light"] .portfolio-filter {
   background: rgba(248, 249, 250, 0.9) !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
-}
-
-[data-theme="light"] .project-modal .modal-content {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9)) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 100px rgba(33, 150, 243, 0.05) !important;
 }
 
 [data-theme="light"] .it-services-placeholder {
@@ -2805,10 +3048,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-[data-theme="light"] .info-grid {
-  background: linear-gradient(145deg, rgba(248, 250, 252, 0.9), rgba(241, 245, 249, 0.8)) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
-}
 
 /* Responsive Portfolio Design */
 @media (max-width: 768px) {

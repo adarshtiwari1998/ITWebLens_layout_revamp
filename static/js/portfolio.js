@@ -553,17 +553,22 @@ function showProjectModal(project) {
                         
                         <div class="info-grid">
                             <div class="info-item">
-                                <strong>Duration:</strong> ${project.duration}
+                                <strong>Duration</strong><span>${project.duration}</span>
                             </div>
                             <div class="info-item">
-                                <strong>Client:</strong> ${project.client}
+                                <strong>Client</strong><span>${project.client}</span>
                             </div>
                             <div class="info-item">
-                                <strong>Maintenance:</strong> 
-                                <span class="status-badge ${project.maintenanceMode.toLowerCase()}">${project.maintenanceMode.toUpperCase()}</span>
+                                <strong>Last Updated</strong><span>${project.lastUpdated}</span>
                             </div>
                             <div class="info-item">
-                                <strong>Project Type:</strong> ${project.projectType}
+                                <strong>Maintenance</strong><span class="meta-value ${project.status.toLowerCase()}">${project.maintenanceMode}</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>Project Type</strong><span>${project.projectType}</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>Status</strong><span class="meta-value status-${project.status.toLowerCase()}">${project.status}</span>
                             </div>
                         </div>
                         
@@ -591,6 +596,15 @@ function showProjectModal(project) {
     `;
     
     modal.show();
+    
+    // Add glassmorphism effect to modal backdrop
+    setTimeout(() => {
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+            backdrop.style.backdropFilter = 'blur(8px)';
+            backdrop.style.background = 'rgba(0, 0, 0, 0.4)';
+        }
+    }, 100);
 }
 
 // Initialize homepage portfolio
@@ -682,6 +696,18 @@ function createHomeProjectCard(project, index) {
             ${statusBadge}
             <div class="portfolio-image">
                 <img src="${project.image}" alt="${project.title}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmOGY5ZmEiLz48L3N2Zz4='">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <button class="btn-action learn-more-btn" onclick="openProjectModal(${projects.indexOf(project)})">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </button>
+                        <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="btn-action">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="portfolio-info">
                 <h5>${project.title}</h5>
@@ -689,11 +715,6 @@ function createHomeProjectCard(project, index) {
                 <div class="portfolio-tags">
                     ${project.technologies.slice(0, 3).map(tech => `<span class="tag">${tech}</span>`).join('')}
                     ${project.technologies.length > 3 ? `<span class="tag">+${project.technologies.length - 3}</span>` : ''}
-                </div>
-                <div class="portfolio-actions mt-3">
-                    <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                        View Project <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </div>
             </div>
         </div>
