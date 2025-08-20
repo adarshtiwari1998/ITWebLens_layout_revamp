@@ -1120,8 +1120,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: var(--text-primary);
 }
-  color: white;
-}
 
 .tech-item i {
   font-size: 2.5rem;
@@ -2752,24 +2750,131 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto !important;
 }
 
+/* Modern 2030 Status Badge */
+.status-badge-modern {
+  display: inline-block;
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.9) 0%, 
+    rgba(16, 185, 129, 0.95) 50%,
+    rgba(34, 197, 94, 0.9) 100%);
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  box-shadow: 
+    0 6px 25px rgba(34, 197, 94, 0.4),
+    0 0 40px rgba(34, 197, 94, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  backdrop-filter: blur(15px);
+  position: relative;
+  overflow: hidden;
+  animation: statusGlow 3s ease-in-out infinite;
+}
+
+.status-badge-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.status-badge-modern:hover::before {
+  left: 100%;
+}
+
+@keyframes statusGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 6px 25px rgba(34, 197, 94, 0.4),
+      0 0 40px rgba(34, 197, 94, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 8px 35px rgba(34, 197, 94, 0.6),
+      0 0 60px rgba(34, 197, 94, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Light mode adjustments for modal content */
+[data-theme="light"] .info-item {
+  background: linear-gradient(145deg, 
+    rgba(248, 250, 252, 0.8), 
+    rgba(241, 245, 249, 0.9)) !important;
+  border-color: rgba(34, 197, 94, 0.2) !important;
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] .info-item strong {
+  color: rgba(34, 197, 94, 0.8) !important;
+}
+
+[data-theme="light"] .info-item span {
+  color: #1a1a1a !important;
+}
+
 .info-item {
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.3rem !important;
-  padding: 0.8rem !important;
-  background: rgba(255, 255, 255, 0.03) !important;
-  border-radius: 12px !important;
-  border: 1px solid rgba(34, 197, 94, 0.15) !important;
-  transition: all 0.3s ease !important;
+  gap: 0.5rem !important;
+  padding: 1.2rem !important;
+  background: linear-gradient(145deg, 
+    rgba(34, 197, 94, 0.08) 0%,
+    rgba(139, 92, 246, 0.06) 50%,
+    rgba(34, 197, 94, 0.08) 100%) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(34, 197, 94, 0.25) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(20px) !important;
+  box-shadow: 
+    0 4px 20px rgba(34, 197, 94, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.info-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(34, 197, 94, 0.8),
+    rgba(139, 92, 246, 0.6),
+    rgba(34, 197, 94, 0.8),
+    transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.info-item:hover::before {
+  transform: translateX(100%);
 }
 
 .info-item:hover {
-  background: rgba(34, 197, 94, 0.08) !important;
-  border-color: rgba(34, 197, 94, 0.3) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15) !important;
+  background: linear-gradient(145deg, 
+    rgba(34, 197, 94, 0.15) 0%,
+    rgba(139, 92, 246, 0.12) 50%,
+    rgba(34, 197, 94, 0.15) 100%) !important;
+  border-color: rgba(34, 197, 94, 0.4) !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 30px rgba(34, 197, 94, 0.25),
+    0 4px 20px rgba(139, 92, 246, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
 }
 
 .info-item strong {
@@ -2987,8 +3092,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Portfolio section theme fixes */
 .portfolio-showcase {
-  background: var(--secondary-bg);
+  background: var(--secondary-bg) !important;
   transition: background 0.3s ease;
+}
+
+[data-theme="light"] .portfolio-showcase {
+  background: #f8f9fa !important;
+}
+
+[data-theme="dark"] .portfolio-showcase {
+  background: #1a1a1a !important;
 }
 
 [data-theme="dark"] .portfolio-card {
@@ -3022,14 +3135,31 @@ h1, h2, h3, h4, h5, h6 {
 /* Light Mode Modal Adjustments */
 [data-theme="light"] .project-modal .modal-content {
   background: linear-gradient(145deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(248, 250, 252, 0.92) 50%, 
-    rgba(255, 255, 255, 0.95) 100%) !important;
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(248, 250, 252, 0.95) 50%, 
+    rgba(255, 255, 255, 0.98) 100%) !important;
   border-color: rgba(34, 197, 94, 0.3) !important;
   box-shadow: 
     0 32px 64px rgba(0, 0, 0, 0.15),
     0 0 80px rgba(34, 197, 94, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .project-modal .modal-content {
+  background: linear-gradient(145deg, 
+    rgba(15, 23, 42, 0.98) 0%, 
+    rgba(30, 41, 59, 0.95) 50%, 
+    rgba(15, 23, 42, 0.98) 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="light"] .project-modal-content {
+  color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .project-modal-content {
+  color: #e2e8f0 !important;
 }
 
 [data-theme="light"] .project-modal .modal-header {

@@ -557,7 +557,7 @@ function showProjectModal(project) {
                     </div>
                     <div class="modal-project-info">
                         <h4>${project.title}</h4>
-                        <div class="status-badge ${project.status.toLowerCase()}" style="position: relative; top: 0; right: 0;">${project.status.toUpperCase()}</div>
+                        <div class="status-badge-modern ${project.status.toLowerCase()}">${project.status.toUpperCase()}</div>
                         
                         <div class="info-grid">
                             <div class="info-item">
