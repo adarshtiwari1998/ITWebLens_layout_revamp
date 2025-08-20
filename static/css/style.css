@@ -2291,8 +2291,10 @@ h1, h2, h3, h4, h5, h6 {
 .project-image img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   transition: transform 0.4s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .project-card:hover .project-image img {
@@ -2470,43 +2472,96 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffa502 !important;
 }
 
-/* Project Modal */
+/* Project Modal - 2030+ Design */
 .project-modal .modal-content {
-  background: var(--glass-bg) !important;
-  backdrop-filter: blur(20px) !important;
-  border: 1px solid var(--glass-border) !important;
-  border-radius: 20px !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)) !important;
+  backdrop-filter: blur(25px) !important;
+  border: 1px solid rgba(148, 163, 184, 0.2) !important;
+  border-radius: 25px !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 100px rgba(33, 150, 243, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-modal .modal-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2196F3, #9C27B0, #4CAF50, #2196F3);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .project-modal .modal-header {
-  border-bottom: 1px solid var(--glass-border) !important;
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(156, 39, 176, 0.1)) !important;
-  border-radius: 20px 20px 0 0 !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2) !important;
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(156, 39, 176, 0.15)) !important;
+  border-radius: 25px 25px 0 0 !important;
+  position: relative;
+  padding: 1.5rem 2rem;
+}
+
+.project-modal .modal-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(33, 150, 243, 0.5), transparent);
 }
 
 .project-modal .modal-title {
-  background: var(--gradient-primary) !important;
+  background: linear-gradient(135deg, #2196F3, #9C27B0, #4CAF50) !important;
+  background-size: 200% 200% !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   font-weight: 700 !important;
-  font-size: 1.4rem !important;
+  font-size: 1.6rem !important;
+  animation: titleGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+}
+
+@keyframes titleGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .project-modal .btn-close {
-  background: var(--glass-bg) !important;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(244, 63, 94, 0.2)) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
   border-radius: 50% !important;
-  opacity: 0.8 !important;
-  filter: invert(1) !important;
+  opacity: 0.9 !important;
+  filter: none !important;
+  color: #ef4444 !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.project-modal .btn-close:hover {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(244, 63, 94, 0.3)) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3) !important;
 }
 
 .modal-project-image img {
   width: 100% !important;
   height: 200px !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   border-radius: 15px !important;
   margin-bottom: 1.5rem !important;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .modal-project-info h4 {
@@ -2518,12 +2573,32 @@ h1, h2, h3, h4, h5, h6 {
 .info-grid {
   display: grid !important;
   grid-template-columns: 1fr !important;
-  gap: 0.8rem !important;
+  gap: 1rem !important;
   margin: 1.5rem 0 !important;
-  padding: 1.2rem !important;
-  background: rgba(33, 150, 243, 0.05) !important;
-  border-radius: 15px !important;
-  border: 1px solid rgba(33, 150, 243, 0.1) !important;
+  padding: 1.5rem !important;
+  background: linear-gradient(145deg, rgba(33, 150, 243, 0.08), rgba(156, 39, 176, 0.05)) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(148, 163, 184, 0.2) !important;
+  backdrop-filter: blur(15px) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(33, 150, 243, 0.1), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .info-item {
@@ -2587,10 +2662,120 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem !important;
 }
 
+/* IT Services Placeholder Styling */
+.it-services-placeholder {
+  background: linear-gradient(145deg, rgba(33, 150, 243, 0.05), rgba(156, 39, 176, 0.03));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.it-services-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(33, 150, 243, 0.05), transparent);
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+.placeholder-icon {
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.placeholder-title {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.placeholder-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(33, 150, 243, 0.1);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-item:hover {
+  background: rgba(33, 150, 243, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+}
+
+.feature-item i {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+}
+
+.feature-item span {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 /* Light Mode Adjustments */
 [data-theme="light"] .portfolio-filter {
   background: rgba(248, 249, 250, 0.9) !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .project-modal .modal-content {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9)) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 100px rgba(33, 150, 243, 0.05) !important;
+}
+
+[data-theme="light"] .it-services-placeholder {
+  background: linear-gradient(145deg, rgba(248, 250, 252, 0.9), rgba(241, 245, 249, 0.8));
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .feature-item {
+  background: rgba(33, 150, 243, 0.08);
+  border-color: rgba(33, 150, 243, 0.15);
+}
+
+[data-theme="light"] .feature-item:hover {
+  background: rgba(33, 150, 243, 0.15);
 }
 
 [data-theme="light"] .filter-btn {
@@ -2621,8 +2806,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme="light"] .info-grid {
-  background: rgba(33, 150, 243, 0.03) !important;
-  border-color: rgba(33, 150, 243, 0.08) !important;
+  background: linear-gradient(145deg, rgba(248, 250, 252, 0.9), rgba(241, 245, 249, 0.8)) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Responsive Portfolio Design */

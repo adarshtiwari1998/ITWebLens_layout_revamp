@@ -123,6 +123,22 @@ const projects = [
 
     // Web Development Projects - Corporate & Business
     {
+        title: "Creative Digital Marketing (CDM)",
+        description: "Service-based company website providing comprehensive digital solutions including video AI production, web development, graphic design, SEO, and digital marketing services.",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/CDM-Logo-svg.svg?updatedAt=1753619821698",
+        url: "https://creativedigitalmarketing.com/",
+        category: "corporate",
+        technologies: ["WordPress", "CMS", "Services", "PHP", "UI/UX", "Development Phase Ongoing"],
+        status: "Active",
+        duration: "From Feb 3 2025 to Present",
+        client: "Creative Digital Marketing (CDM)",
+        lastUpdated: "23rd June 2025",
+        maintenanceMode: "Active",
+        projectType: "Company",
+        developmentPhase: "Development Phase Ongoing",
+        detailedDescription: "Service-based company website providing comprehensive digital solutions including video AI production, web development, graphic design, SEO, and digital marketing services. CDM specializes in creating innovative digital experiences that help businesses establish their online presence and reach their target audience effectively."
+    },
+    {
         title: "NIDDIKKARE",
         description: "Healthcare and Life Sciences Solutions website providing comprehensive medical and pharmaceutical services.",
         image: "https://niddikkare.com/assets/niddikkare-logo-BPeb58AZ.png",
@@ -170,6 +186,111 @@ const projects = [
         maintenanceMode: "Active",
         projectType: "Corporate",
         detailedDescription: "Corporate website for DoubleR Bags, a premium bag manufacturing company. The website showcases the company's brand story, product categories, manufacturing capabilities, and corporate information with a focus on professional presentation and brand credibility."
+    },
+    {
+        title: "UBON",
+        description: "E-commerce website for electronic accessories brand.",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/Ubon-logo_f8d2423b-8771-4171-a4f1-e9ce11369c70.png_v=1716528002&width=260?updatedAt=1753606101458",
+        url: "https://ubon.in/",
+        category: "ecommerce",
+        technologies: ["Shopify", "E-commerce", "Custom CMS", "UI/UX"],
+        status: "Active",
+        duration: "From October 3 2022 to June 10th 2023",
+        client: "UBON",
+        lastUpdated: "12th June 2023",
+        maintenanceMode: "CLOSED",
+        projectType: "E-commerce",
+        detailedDescription: "Shopify Based website. where I design Home page, collection page, product page, Inner page. Tech used: Shopify CMS, Shopify API, Shopify Customization, liquid, JavaScript, HTML, CSS"
+    },
+    {
+        title: "Aimil Pharma",
+        description: "Pharmaceutical company corporate website.",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/logo.gif_v=25854662810657892401629092980?updatedAt=1753607280367",
+        url: "https://www.aimilpharma.life/",
+        category: "corporate",
+        technologies: ["Healthcare", "Corporate", "CMS", "Shopify"],
+        status: "Active",
+        duration: "From 8th July 2023 to 7th Aug 2023",
+        client: "Aimil Pharma",
+        lastUpdated: "7th August 2023",
+        maintenanceMode: "CLOSED",
+        projectType: "Corporate",
+        detailedDescription: "Shopify Based website. where I design some components and design some section. Tech used: Shopify CMS, Shopify API, liquid, JavaScript, HTML, CSS"
+    },
+    {
+        title: "Aimil Vets",
+        description: "Veterinary pharmaceutical company website.",
+        image: "https://ik.imagekit.io/YTWebVideoAutomation/itweblens-portfolio-projects-assets/logo.png_v=152719617182417059431740117291?updatedAt=1753608337644",
+        url: "https://www.aimilvets.life/",
+        category: "corporate",
+        technologies: ["Veterinary", "Healthcare", "Web Development", "Shopify"],
+        status: "Active",
+        duration: "From 10th Aug 2023 to 20th Aug 2023",
+        client: "Aimil Vets",
+        lastUpdated: "20th August 2023",
+        maintenanceMode: "CLOSED",
+        projectType: "Corporate",
+        detailedDescription: "Shopify Based website. where I design some components and design some section. Tech used: Shopify CMS, Shopify API, liquid, JavaScript, HTML, CSS"
+    },
+    {
+        title: "iOrganic",
+        description: "Organic delivers 100% Natural and Organic A2 Cow Milk & Dairy Products Online Store",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/Vector_Smart_Object-01_copy_105x@2x.png_v=1628088115?updatedAt=1753606491170",
+        url: "https://iorganicmilk.com/",
+        category: "ecommerce",
+        technologies: ["E-commerce", "Shopify", "Liquid"],
+        status: "Active",
+        duration: "From 29th December 2022 to 22 January 2023",
+        client: "iOrganic",
+        lastUpdated: "22nd November 2023",
+        maintenanceMode: "CLOSED",
+        projectType: "E-commerce",
+        detailedDescription: "Shopify Based website. where I design Home page, collection page, product page, Inner page. Tech used: Shopify CMS, Shopify API, Shopify Customization, liquid, JavaScript, HTML, CSS"
+    },
+    {
+        title: "SmartYums",
+        description: "Plant Based Protein Bar for Active Kids - Protein Bites Online Store",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/Smartyums-logo-with-tagline-512_5eb0084e-8f13-40ca-9df1-8d2928a8be64.png_v=1698834516&width=500?updatedAt=1753606562416",
+        url: "https://smartyums.com/",
+        category: "ecommerce",
+        technologies: ["E-commerce", "Shopify", "Liquid"],
+        status: "Active",
+        duration: "From 10th January 2023 to 22nd Feb 2023",
+        client: "SmartYums",
+        lastUpdated: "22nd November 2023",
+        maintenanceMode: "CLOSED",
+        projectType: "E-commerce",
+        detailedDescription: "Shopify Based website. where I design Home page, collection page, product page, Inner page. Tech used: Shopify CMS, Shopify API, Shopify Customization, liquid, JavaScript, HTML, CSS"
+    },
+    {
+        title: "Shirt Theory",
+        description: "Fashion e-commerce store for premium shirts.",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/St_Logo-01cut_267277e7-8e12-42ec-851c-2cd4a8fac87e.png_v=1680072143&width=180?updatedAt=1753606762031",
+        url: "https://shirttheory.co.in/",
+        category: "ecommerce",
+        technologies: ["E-commerce", "Shopify", "Design"],
+        status: "Active",
+        duration: "From 16th September 2021 to 03 Feb 2022",
+        client: "Shirt Theory",
+        lastUpdated: "03 Feb 2022",
+        maintenanceMode: "CLOSED",
+        projectType: "E-commerce",
+        detailedDescription: "Shopify Based website. where I design Home page, collection page, product page, Inner page. Tech used: Shopify CMS, Shopify API, Shopify Customization, liquid, JavaScript, HTML, CSS"
+    },
+    {
+        title: "White Dahlia",
+        description: "Premium quality kids western wear for girls or casual wear for girls kids website.",
+        image: "https://ik.imagekit.io/YTVideoAutomation/itweblens-portfolio-projects-assets/White-Dahlia-Logo-Only_0dacf142-84b5-4ae2-82bf-c7e56e53b195.jpg_v=1679399374&width=1200?updatedAt=1753606813348",
+        url: "https://whitedahlia.co.in/",
+        category: "ecommerce",
+        technologies: ["E-commerce", "Shopify", "Web Design"],
+        status: "Active",
+        duration: "From 16th September 2021 to 03 Feb 2022",
+        client: "White Dahlia",
+        lastUpdated: "03 Feb 2022",
+        maintenanceMode: "CLOSED",
+        projectType: "E-commerce",
+        detailedDescription: "Premium quality kids western wear for girls or casual wear for girls kids website. This Shopify-based e-commerce platform specializes in children's fashion, offering a curated collection of western and casual wear designed specifically for young girls."
     },
     {
         title: "DoubleR Bags E-commerce",
@@ -222,6 +343,7 @@ const projects = [
 document.addEventListener('DOMContentLoaded', function() {
     initPortfolio();
     initModal();
+    initHomePortfolio();
 });
 
 function initPortfolio() {
@@ -230,8 +352,8 @@ function initPortfolio() {
     
     if (!portfolioContainer) return;
     
-    // Render all projects initially
-    renderProjects('all');
+    // Render web development projects initially
+    renderProjects('web');
     
     // Add click listeners to filter buttons
     filterButtons.forEach(button => {
@@ -259,10 +381,47 @@ function renderProjects(filter) {
         filteredProjects = projects.filter(project => 
             project.category === 'corporate' || project.category === 'ecommerce'
         );
+    } else if (filter === 'it-services') {
+        // Empty for now - placeholder
+        filteredProjects = [];
     }
     
     // Clear existing content
     portfolioContainer.innerHTML = '';
+    
+    // Handle IT Services placeholder
+    if (filter === 'it-services') {
+        portfolioContainer.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <div class="it-services-placeholder">
+                    <div class="placeholder-icon">
+                        <i class="fas fa-server fa-4x mb-3"></i>
+                    </div>
+                    <h3 class="placeholder-title">IT Services Projects</h3>
+                    <p class="placeholder-description">Our comprehensive IT services portfolio is coming soon. We specialize in cloud infrastructure, enterprise solutions, and digital transformation projects.</p>
+                    <div class="placeholder-features">
+                        <div class="feature-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Infrastructure</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <span>Data Management</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Network Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        return;
+    }
     
     // Render filtered projects
     filteredProjects.forEach((project, index) => {
@@ -432,4 +591,113 @@ function showProjectModal(project) {
     `;
     
     modal.show();
+}
+
+// Initialize homepage portfolio
+function initHomePortfolio() {
+    const homeFilterButtons = document.querySelectorAll('.portfolio-showcase .filter-btn');
+    const homePortfolioContainer = document.getElementById('homePortfolioContainer');
+    
+    if (!homePortfolioContainer) return;
+    
+    // Render initial projects (first 3 web development projects)
+    renderHomeProjects('web');
+    
+    // Add click listeners to filter buttons
+    homeFilterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            homeFilterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Get filter and render projects
+            const filter = this.getAttribute('data-filter');
+            renderHomeProjects(filter);
+        });
+    });
+}
+
+function renderHomeProjects(filter) {
+    const homePortfolioContainer = document.getElementById('homePortfolioContainer');
+    if (!homePortfolioContainer) return;
+    
+    // Filter projects (same logic as main portfolio)
+    let filteredProjects = projects;
+    if (filter === 'personal') {
+        filteredProjects = projects.filter(project => project.category === 'personal');
+    } else if (filter === 'web') {
+        filteredProjects = projects.filter(project => 
+            project.category === 'corporate' || project.category === 'ecommerce'
+        );
+    } else if (filter === 'it-services') {
+        // Empty for now - placeholder
+        filteredProjects = [];
+    }
+    
+    // Clear existing content
+    homePortfolioContainer.innerHTML = '';
+    
+    // Handle IT Services placeholder
+    if (filter === 'it-services') {
+        homePortfolioContainer.innerHTML = `
+            <div class="col-12 text-center py-4">
+                <div class="it-services-placeholder">
+                    <div class="placeholder-icon">
+                        <i class="fas fa-server fa-3x mb-3"></i>
+                    </div>
+                    <h4 class="placeholder-title">IT Services Projects</h4>
+                    <p class="placeholder-description">Our comprehensive IT services portfolio is coming soon.</p>
+                </div>
+            </div>
+        `;
+        return;
+    }
+    
+    // Show first 3 projects only for homepage
+    const projectsToShow = filteredProjects.slice(0, 3);
+    
+    projectsToShow.forEach((project, index) => {
+        const projectCard = createHomeProjectCard(project, index);
+        homePortfolioContainer.appendChild(projectCard);
+    });
+    
+    // Reinitialize AOS for new elements
+    if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+    }
+}
+
+function createHomeProjectCard(project, index) {
+    const col = document.createElement('div');
+    col.className = 'col-lg-4 col-md-6 mb-4';
+    col.setAttribute('data-aos', 'fade-up');
+    col.setAttribute('data-aos-delay', (index * 100).toString());
+    
+    const newBadge = project.isNew ? '<div class="project-badge new-badge">NEW</div>' : '';
+    const statusBadge = `<div class="project-badge status-badge ${project.status.toLowerCase()}">${project.status.toUpperCase()}</div>`;
+    
+    col.innerHTML = `
+        <div class="portfolio-card">
+            ${newBadge}
+            ${statusBadge}
+            <div class="portfolio-image">
+                <img src="${project.image}" alt="${project.title}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmOGY5ZmEiLz48L3N2Zz4='">
+            </div>
+            <div class="portfolio-info">
+                <h5>${project.title}</h5>
+                <p>${project.description.substring(0, 120)}...</p>
+                <div class="portfolio-tags">
+                    ${project.technologies.slice(0, 3).map(tech => `<span class="tag">${tech}</span>`).join('')}
+                    ${project.technologies.length > 3 ? `<span class="tag">+${project.technologies.length - 3}</span>` : ''}
+                </div>
+                <div class="portfolio-actions mt-3">
+                    <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return col;
 }

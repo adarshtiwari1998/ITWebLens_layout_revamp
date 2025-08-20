@@ -301,73 +301,23 @@
         <div class="row">
             <div class="col-12" data-aos="fade-up">
                 <div class="portfolio-tabs">
-                    <ul class="nav nav-pills justify-content-center mb-5">
-                        <li class="nav-item">
-                            <button class="nav-link active portfolio-tab" data-category="it-services" data-translate="portfolio_showcase.tab_it">IT Services Projects</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link portfolio-tab" data-category="web-development" data-translate="portfolio_showcase.tab_web">Web Development</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link portfolio-tab" data-category="personal-projects" data-translate="portfolio_showcase.tab_personal">Personal Projects</button>
-                        </li>
-                    </ul>
+                    <div class="filter-buttons justify-content-center mb-5">
+                        <button class="filter-btn active" data-filter="web" data-translate="portfolio_showcase.tab_web">Web Development</button>
+                        <button class="filter-btn" data-filter="personal" data-translate="portfolio_showcase.tab_personal">Personal Projects</button>
+                        <button class="filter-btn" data-filter="it-services" data-translate="portfolio_showcase.tab_it">IT Services</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row portfolio-content">
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item it-services" data-aos="fade-up">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <i class="fas fa-cloud fa-3x text-primary"></i>
-                    </div>
-                    <div class="portfolio-info">
-                        <h5 data-translate="portfolio_showcase.project1_title">Enterprise Cloud Migration</h5>
-                        <p data-translate="portfolio_showcase.project1_desc">Complete Azure cloud infrastructure setup for multinational corporation</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Azure</span>
-                            <span class="tag">VMware</span>
-                            <span class="tag">Enterprise</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-development" data-aos="fade-up">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <i class="fas fa-shopping-cart fa-3x text-success"></i>
-                    </div>
-                    <div class="portfolio-info">
-                        <h5 data-translate="portfolio_showcase.project2_title">E-commerce Platform</h5>
-                        <p data-translate="portfolio_showcase.project2_desc">Next.js based e-commerce solution with AI-powered recommendations</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">React</span>
-                            <span class="tag">AI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item personal-projects" data-aos="fade-up">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <i class="fas fa-robot fa-3x text-info"></i>
-                    </div>
-                    <div class="portfolio-info">
-                        <h5 data-translate="portfolio_showcase.project3_title">AI Assistant Bot</h5>
-                        <p data-translate="portfolio_showcase.project3_desc">Personal AI assistant with natural language processing capabilities</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">AI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="homePortfolioContainer">
+            <!-- Projects will be dynamically loaded here -->
         </div>
         <div class="row">
             <div class="col-12 text-center" data-aos="fade-up">
-                <a href="/portfolio" class="btn btn-primary btn-lg" data-translate="portfolio_showcase.view_all">View Complete Portfolio</a>
+                <a href="{{ url_for('portfolio') }}" class="btn btn-outline-primary btn-lg" data-translate="portfolio_showcase.view_all">
+                    <i class="fas fa-arrow-right me-2"></i>
+                    View Complete Portfolio
+                </a>
             </div>
         </div>
     </div>
