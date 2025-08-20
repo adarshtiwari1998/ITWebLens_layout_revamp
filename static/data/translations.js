@@ -42,15 +42,31 @@ window.translations = {
             subtitle: "Cutting-edge tools and frameworks we master"
         },
         
-        // Global Reach
-        global: {
-            title: "Global Presence",
-            subtitle: "Serving clients across continents with 24/7 support",
-            usa: "United States",
-            uk: "United Kingdom",
-            japan: "Japan",
-            australia: "Australia",
-            india: "India"
+        // Comparison Section
+        comparison: {
+            title: "Why Choose ITWEBLENS Over Others?",
+            subtitle: "Experience the difference with our cutting-edge technology and comprehensive solutions",
+            others_title: "Other IT Service Providers",
+            others_badge: "Basic Services",
+            others_feature1: "Limited to Web Development",
+            others_feature2: "No AI Integration",
+            others_feature3: "Regional Coverage Only",
+            others_feature4: "Standard Security",
+            others_feature5: "9-5 Support",
+            others_feature6: "Legacy Technologies",
+            itweblens_title: "ITWEBLENS",
+            itweblens_badge: "2030+ Future-Ready Solutions",
+            itweblens_feature1: "Full-Stack + AI Services",
+            itweblens_feature2: "Advanced AI Integration",
+            itweblens_feature3: "Global Coverage (US, UK, JP, AU, IN)",
+            itweblens_feature4: "Enterprise-Grade Security",
+            itweblens_feature5: "24/7 Premium Support",
+            itweblens_feature6: "2030+ Future Technologies",
+            tech_title: "Our Technology Edge",
+            tech_subtitle: "What makes ITWEBLENS the future of IT services",
+            web_dev_title: "Web Development",
+            ai_services_title: "AI Services",
+            it_services_title: "IT Infrastructure"
         },
         
         // CTA Section
@@ -466,14 +482,30 @@ window.translations = {
         },
         
         // Global Reach
-        global: {
-            title: "グローバル展開",
-            subtitle: "24時間365日サポートで世界中のクライアントにサービス提供",
-            usa: "アメリカ",
-            uk: "イギリス",
-            japan: "日本",
-            australia: "オーストラリア",
-            india: "インド"
+        comparison: {
+            title: "なぜ他社よりもITWEBLENSを選ぶのか？",
+            subtitle: "最先端技術と包括的ソリューションの違いを体験してください",
+            others_title: "他のITサービスプロバイダー",
+            others_badge: "基本サービス",
+            others_feature1: "Webデベロップメントに限定",
+            others_feature2: "AI統合なし",
+            others_feature3: "地域カバレッジのみ",
+            others_feature4: "標準セキュリティ",
+            others_feature5: "9-5サポート",
+            others_feature6: "レガシー技術",
+            itweblens_title: "ITWEBLENS",
+            itweblens_badge: "2030+未来対応ソリューション",
+            itweblens_feature1: "フルスタック + AIサービス",
+            itweblens_feature2: "高度なAI統合",
+            itweblens_feature3: "グローバルカバレッジ（US、UK、JP、AU、IN）",
+            itweblens_feature4: "エンタープライズグレードセキュリティ",
+            itweblens_feature5: "24/7プレミアムサポート",
+            itweblens_feature6: "2030+未来技術",
+            tech_title: "私たちの技術的優位性",
+            tech_subtitle: "ITWEBLENSがITサービスの未来である理由",
+            web_dev_title: "Webデベロップメント",
+            ai_services_title: "AIサービス",
+            it_services_title: "ITインフラストラクチャ"
         },
         
         // CTA Section
@@ -833,14 +865,30 @@ window.translations = {
         },
         
         // Global Reach
-        global: {
-            title: "वैश्विक उपस्थिति",
-            subtitle: "24/7 सहायता के साथ महाद्वीपों में ग्राहकों की सेवा",
-            usa: "संयुक्त राज्य अमेरिका",
-            uk: "यूनाइटेड किंगडम",
-            japan: "जापान",
-            australia: "ऑस्ट्रेलिया",
-            india: "भारत"
+        comparison: {
+            title: "अन्य कंपनियों की तुलना में ITWEBLENS क्यों चुनें?",
+            subtitle: "अत्याधुनिक तकनीक और व्यापक समाधानों के साथ अंतर का अनुभव करें",
+            others_title: "अन्य IT सेवा प्रदाता",
+            others_badge: "बुनियादी सेवाएं",
+            others_feature1: "केवल वेब डेवलपमेंट तक सीमित",
+            others_feature2: "कोई AI एकीकरण नहीं",
+            others_feature3: "केवल क्षेत्रीय कवरेज",
+            others_feature4: "मानक सुरक्षा",
+            others_feature5: "9-5 सहायता",
+            others_feature6: "पुरानी तकनीकें",
+            itweblens_title: "ITWEBLENS",
+            itweblens_badge: "2030+ भविष्य-तैयार समाधान",
+            itweblens_feature1: "फुल-स्टैक + AI सेवाएं",
+            itweblens_feature2: "उन्नत AI एकीकरण",
+            itweblens_feature3: "वैश्विक कवरेज (US, UK, JP, AU, IN)",
+            itweblens_feature4: "एंटरप्राइज़-ग्रेड सुरक्षा",
+            itweblens_feature5: "24/7 प्रीमियम सहायता",
+            itweblens_feature6: "2030+ भविष्य की तकनीकें",
+            tech_title: "हमारा तकनीकी लाभ",
+            tech_subtitle: "ITWEBLENS IT सेवाओं का भविष्य क्यों है",
+            web_dev_title: "वेब डेवलपमेंट",
+            ai_services_title: "AI सेवाएं",
+            it_services_title: "IT बुनियादी ढांचा"
         },
         
         // CTA Section
