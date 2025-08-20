@@ -4,7 +4,9 @@ class LanguageManager {
     constructor() {
         this.currentLanguage = 'en';
         this.translations = window.translations || {};
-        this.languageSelect = document.getElementById('languageSelect');
+        this.languageDropdown = document.getElementById('languageDropdown');
+        this.langCurrent = document.getElementById('langCurrent');
+        this.langOptions = document.getElementById('langOptions');
         
         this.init();
     }
@@ -19,16 +21,36 @@ class LanguageManager {
         const saved = localStorage.getItem('itweblens_language');
         if (saved && this.translations[saved]) {
             this.currentLanguage = saved;
-            if (this.languageSelect) {
-                this.languageSelect.value = saved;
-            }
+            this.updateCurrentDisplay(saved);
         }
     }
     
     bindEvents() {
-        if (this.languageSelect) {
-            this.languageSelect.addEventListener('change', (e) => {
-                this.changeLanguage(e.target.value);
+        if (this.langCurrent && this.langOptions) {
+            // Toggle dropdown
+            this.langCurrent.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleDropdown();
+            });
+
+            // Handle option selection
+            this.langOptions.addEventListener('click', (e) => {
+                const option = e.target.closest('.lang-option');
+                if (option) {
+                    const langCode = option.dataset.lang;
+                    this.changeLanguage(langCode);
+                    this.closeDropdown();
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                this.closeDropdown();
+            });
+
+            // Prevent dropdown from closing when clicking inside
+            this.langOptions.addEventListener('click', (e) => {
+                e.stopPropagation();
             });
         }
     }
@@ -42,9 +64,69 @@ class LanguageManager {
         this.currentLanguage = langCode;
         localStorage.setItem('itweblens_language', langCode);
         
+        this.updateCurrentDisplay(langCode);
+        this.updateActiveOption(langCode);
         this.translatePage();
         this.updatePageDirection();
         this.showLanguageChangeNotification();
+    }
+
+    toggleDropdown() {
+        if (this.langOptions) {
+            const isOpen = this.langOptions.classList.contains('show');
+            if (isOpen) {
+                this.closeDropdown();
+            } else {
+                this.openDropdown();
+            }
+        }
+    }
+
+    openDropdown() {
+        if (this.langOptions && this.langCurrent) {
+            this.langOptions.classList.add('show');
+            this.langCurrent.classList.add('active');
+        }
+    }
+
+    closeDropdown() {
+        if (this.langOptions && this.langCurrent) {
+            this.langOptions.classList.remove('show');
+            this.langCurrent.classList.remove('active');
+        }
+    }
+
+    updateCurrentDisplay(langCode) {
+        if (!this.langCurrent) return;
+        
+        const langData = {
+            'en': { flag: '🇺🇸', code: 'EN' },
+            'ja': { flag: '🇯🇵', code: 'JP' },
+            'hi': { flag: '🇮🇳', code: 'HI' }
+        };
+
+        const data = langData[langCode];
+        if (data) {
+            const flag = this.langCurrent.querySelector('.lang-flag');
+            const code = this.langCurrent.querySelector('.lang-code');
+            
+            if (flag) flag.textContent = data.flag;
+            if (code) code.textContent = data.code;
+        }
+    }
+
+    updateActiveOption(langCode) {
+        if (!this.langOptions) return;
+        
+        // Remove active class from all options
+        const options = this.langOptions.querySelectorAll('.lang-option');
+        options.forEach(option => option.classList.remove('active'));
+        
+        // Add active class to selected option
+        const activeOption = this.langOptions.querySelector(`[data-lang="${langCode}"]`);
+        if (activeOption) {
+            activeOption.classList.add('active');
+        }
     }
     
     translatePage() {
