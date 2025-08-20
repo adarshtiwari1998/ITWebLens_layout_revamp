@@ -408,6 +408,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-subtitle {
@@ -673,6 +677,19 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 1);
   border-color: rgba(33, 150, 243, 0.2);
   box-shadow: 0 15px 30px rgba(33, 150, 243, 0.15);
+  transform: translateY(-10px);
+}
+
+[data-theme="light"] .stat-card:hover .stat-number {
+  color: var(--primary-blue);
+}
+
+[data-theme="light"] .stat-card:hover .stat-label {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .stat-card:hover .stat-icon {
+  color: var(--primary-blue);
 }
 
 [data-theme="light"] .stat-number {
@@ -1913,10 +1930,23 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-  background: var(--gradient-primary);
-  color: white;
+[data-theme="dark"] .stat-card:hover {
+  transform: translateY(-10px);
+  background: var(--glass-bg);
+  border-color: rgba(33, 150, 243, 0.3);
+  box-shadow: 0 15px 30px rgba(33, 150, 243, 0.2);
+}
+
+[data-theme="dark"] .stat-card:hover .stat-number {
+  color: var(--primary-blue);
+}
+
+[data-theme="dark"] .stat-card:hover .stat-label {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .stat-card:hover .stat-icon {
+  color: var(--primary-blue);
 }
 
 .stat-card .stat-number {
@@ -1927,18 +1957,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-.stat-card:hover .stat-number {
-  color: white;
-}
+/* Removed conflicting rule - handled by theme-specific rules above */
 
 .stat-card .stat-label {
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
-.stat-card:hover .stat-label {
-  color: white;
-}
+/* Removed conflicting rule - handled by theme-specific rules above */
 
 /* Team specific */
 .position-card {
