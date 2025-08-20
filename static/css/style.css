@@ -170,11 +170,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease;
   background: rgba(255, 255, 255, 0.75);
   padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .brand-link:hover {
   transform: scale(1.02);
   background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .brand-logo {
@@ -558,13 +561,16 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* Light theme brand adjustments */
+/* Light theme brand adjustments - clean minimal style */
 [data-theme="light"] .brand-link {
   background: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 [data-theme="light"] .brand-link:hover {
   background: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
 }
 
 /* Theme Toggle */
