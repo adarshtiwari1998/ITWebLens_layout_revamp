@@ -1970,9 +1970,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Logo Styles - Modern 2030 Standards (Google-inspired sizing) */
 .navbar-logo {
-  height: 24px;
+  height: 28px;
   width: auto;
-  max-width: 90px;
+  max-width: 140px;
+  min-width: 120px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   transition: all 0.3s ease;
   object-fit: contain;
@@ -2007,25 +2008,27 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive logo sizing */
 @media (max-width: 768px) {
   .navbar-logo {
-    height: 22px;
-    max-width: 80px;
+    height: 26px;
+    max-width: 120px;
+    min-width: 100px;
   }
   
   .footer-logo {
     height: 35px;
-    max-width: 120px;
+    max-width: 130px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-logo {
-    height: 20px;
-    max-width: 70px;
+    height: 24px;
+    max-width: 110px;
+    min-width: 90px;
   }
   
   .footer-logo {
     height: 30px;
-    max-width: 100px;
+    max-width: 110px;
   }
 }
 
