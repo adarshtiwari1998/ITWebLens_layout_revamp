@@ -185,11 +185,6 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   transition: transform 0.3s ease;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 /* Navigation Pills */
