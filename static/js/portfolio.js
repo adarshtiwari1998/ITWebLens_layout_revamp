@@ -499,6 +499,14 @@ function createProjectCard(project, index) {
     return col;
 }
 
+// Add the missing openProjectModal function that cards are calling
+function openProjectModal(projectIndex) {
+    const project = projects[projectIndex];
+    if (project) {
+        showProjectModal(project);
+    }
+}
+
 function initModal() {
     // Create modal HTML
     const modalHTML = `
@@ -549,7 +557,7 @@ function showProjectModal(project) {
                     </div>
                     <div class="modal-project-info">
                         <h4>${project.title}</h4>
-                        <div class="status-badge ${project.status.toLowerCase()}">${project.status.toUpperCase()}</div>
+                        <div class="status-badge ${project.status.toLowerCase()}" style="position: relative; top: 0; right: 0;">${project.status.toUpperCase()}</div>
                         
                         <div class="info-grid">
                             <div class="info-item">
