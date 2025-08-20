@@ -1970,9 +1970,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Logo Styles - Modern 2030 Standards (Google-inspired sizing) */
 .navbar-logo {
-  height: 32px;
+  height: 24px;
   width: auto;
-  max-width: 120px;
+  max-width: 90px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   transition: all 0.3s ease;
   object-fit: contain;
@@ -2007,41 +2007,61 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive logo sizing */
 @media (max-width: 768px) {
   .navbar-logo {
-    height: 28px;
-    max-width: 100px;
+    height: 22px;
+    max-width: 80px;
   }
   
   .footer-logo {
-    height: 40px;
-    max-width: 130px;
+    height: 35px;
+    max-width: 120px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-logo {
-    height: 24px;
-    max-width: 85px;
+    height: 20px;
+    max-width: 70px;
   }
   
   .footer-logo {
-    height: 35px;
-    max-width: 110px;
+    height: 30px;
+    max-width: 100px;
   }
 }
 
 /* Dark Mode Text Fixes */
 [data-theme="dark"] .futuristic-footer {
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
 }
 
 [data-theme="dark"] .futuristic-footer p,
-[data-theme="dark"] .futuristic-footer h6,
-[data-theme="dark"] .futuristic-footer .list-unstyled li a {
-  color: var(--text-secondary) !important;
+[data-theme="dark"] .futuristic-footer span,
+[data-theme="dark"] .futuristic-footer div {
+  color: #e0e0e0 !important;
 }
 
 [data-theme="dark"] .futuristic-footer h6 {
-  color: var(--text-primary) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .futuristic-footer .list-unstyled li a {
+  color: #b3b3b3 !important;
+}
+
+[data-theme="dark"] .futuristic-footer .list-unstyled li a:hover {
+  color: var(--primary-blue) !important;
+}
+
+/* Ensure tagline and description text is visible in dark mode */
+[data-theme="dark"] .tagline-badge {
+  color: white !important;
+  background: linear-gradient(135deg, #2196F3, #4CAF50) !important;
+}
+
+/* Footer copyright and bottom text */
+[data-theme="dark"] .futuristic-footer .row p,
+[data-theme="dark"] .futuristic-footer .row span {
+  color: #cccccc !important;
 }
 
 [data-theme="dark"] .footer-logo {
