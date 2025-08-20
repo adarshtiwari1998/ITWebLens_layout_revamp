@@ -208,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   background: var(--gradient-dark);
   overflow: hidden;
+  padding-top: 80px; /* Account for larger navbar */
 }
 
 .hero-background {
@@ -2019,6 +2020,10 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 170px;
     min-width: 150px;
   }
+  
+  .hero-section {
+    padding-top: 75px; /* Adjust for tablet navbar height */
+  }
 }
 
 @media (max-width: 480px) {
@@ -2032,6 +2037,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 45px;
     max-width: 150px;
     min-width: 130px;
+  }
+  
+  .hero-section {
+    padding-top: 70px; /* Adjust for mobile navbar height */
   }
 }
 
