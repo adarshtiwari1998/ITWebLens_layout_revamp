@@ -356,8 +356,8 @@ window.translations = {
         
         // CTA Section
         cta: {
-            title: "Ready to experience smarter & more accurate AI answers?",
-            subtitle: "Gain an edge with our exclusive services, designed to provide you with tailored insights and guidance across every industry and subject.",
+            title: "Ready to Transform Your Business with Cutting-Edge IT Solutions?",
+            subtitle: "Partner with ITWEBLENS for innovative web development, enterprise IT services, and digital transformation solutions that drive your business forward.",
             button: "Get Started Now"
         },
         
@@ -478,9 +478,9 @@ window.translations = {
         
         // CTA Section
         cta: {
-            title: "ビジネス変革の準備はできていますか？",
-            subtitle: "一緒に素晴らしいものを構築しましょう",
-            button: "プロジェクトを始める"
+            title: "最先端ITソリューションでビジネス変革の準備はできていますか？",
+            subtitle: "ITWEBLENSと革新的なWeb開発、エンタープライズITサービス、デジタル変革ソリューションでビジネスを前進させましょう。",
+            button: "今すぐ始める"
         },
         
         // Footer
@@ -845,9 +845,9 @@ window.translations = {
         
         // CTA Section
         cta: {
-            title: "अपने व्यापार को बदलने के लिए तैयार हैं?",
-            subtitle: "आइए एक साथ कुछ असाधारण बनाते हैं",
-            button: "अपनी परियोजना शुरू करें"
+            title: "अत्याधुनिक IT समाधानों के साथ अपने व्यापार को बदलने के लिए तैयार हैं?",
+            subtitle: "नवाचार वेब डेवलपमेंट, एंटरप्राइज़ IT सेवाओं, और डिजिटल परिवर्तन समाधानों के लिए ITWEBLENS के साथ साझेदारी करें जो आपके व्यापार को आगे बढ़ाते हैं।",
+            button: "अभी शुरू करें"
         },
         
         // Footer
