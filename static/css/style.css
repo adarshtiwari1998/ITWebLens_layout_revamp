@@ -581,6 +581,58 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 
+/* Light Mode AI Services Styling */
+[data-theme="light"] .ai-services-spotlight {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+}
+
+[data-theme="light"] .ai-services-spotlight::before {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid-light" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%232196F3" stroke-width="0.3" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grid-light)"/></svg>') repeat;
+}
+
+[data-theme="light"] .ai-service-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(33, 150, 243, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .ai-service-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(33, 150, 243, 0.3);
+  box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+}
+
+[data-theme="light"] .ai-feature-list li {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .ai-service-card h3,
+[data-theme="light"] .ai-service-card h4,
+[data-theme="light"] .ai-service-card p {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .ai-icon {
+  color: var(--primary-blue);
+}
+
+[data-theme="light"] .ai-pulse {
+  border-color: var(--primary-blue);
+}
+
+/* Ensure AI section titles are visible in light mode */
+[data-theme="light"] .ai-services-spotlight .section-title,
+[data-theme="light"] .ai-services-spotlight .section-subtitle {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .ai-services-spotlight .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .service-card::before {
   content: '';
   position: absolute;
