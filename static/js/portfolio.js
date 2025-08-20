@@ -542,28 +542,89 @@ function initModal() {
             }
         }
     });
+
+    // Listen for theme changes and update modal accordingly
+    document.addEventListener('themeChanged', function(e) {
+        const modalElement = document.getElementById('projectModal');
+        if (modalElement && modalElement.classList.contains('show')) {
+            applyModalTheme();
+        }
+    });
+}
+
+// Function to apply current theme to modal
+function applyModalTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const modalElement = document.getElementById('projectModal');
+    
+    if (!modalElement) return;
+    
+    const modalContent = modalElement.querySelector('.modal-content');
+    const modalHeader = modalElement.querySelector('.modal-header');
+    const modalBody = modalElement.querySelector('.modal-body');
+    const modalTitle = modalElement.querySelector('.modal-title');
+    const btnClose = modalElement.querySelector('.btn-close');
+    
+    if (currentTheme === 'dark') {
+        // Apply dark theme styles
+        if (modalContent) {
+            modalContent.style.background = 'rgba(15, 23, 42, 0.95)';
+            modalContent.style.color = '#e2e8f0';
+            modalContent.style.border = '1px solid rgba(34, 197, 94, 0.2)';
+            modalContent.style.backdropFilter = 'blur(20px) saturate(180%)';
+        }
+        if (modalHeader) {
+            modalHeader.style.background = 'transparent';
+            modalHeader.style.color = '#e2e8f0';
+            modalHeader.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+        }
+        if (modalBody) {
+            modalBody.style.background = 'transparent';
+            modalBody.style.color = '#e2e8f0';
+        }
+        if (modalTitle) {
+            modalTitle.style.color = 'rgba(34, 197, 94, 1)';
+        }
+        if (btnClose) {
+            btnClose.style.background = 'rgba(239, 68, 68, 0.8)';
+            btnClose.style.border = 'none';
+            btnClose.style.borderRadius = '50%';
+        }
+    } else {
+        // Apply light theme styles
+        if (modalContent) {
+            modalContent.style.background = 'rgba(255, 255, 255, 0.95)';
+            modalContent.style.color = '#1a1a1a';
+            modalContent.style.border = '1px solid rgba(0, 0, 0, 0.1)';
+            modalContent.style.backdropFilter = 'blur(20px) saturate(180%)';
+        }
+        if (modalHeader) {
+            modalHeader.style.background = 'transparent';
+            modalHeader.style.color = '#1a1a1a';
+            modalHeader.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+        }
+        if (modalBody) {
+            modalBody.style.background = 'transparent';
+            modalBody.style.color = '#1a1a1a';
+        }
+        if (modalTitle) {
+            modalTitle.style.color = 'rgba(34, 197, 94, 1)';
+        }
+        if (btnClose) {
+            btnClose.style.background = 'rgba(239, 68, 68, 0.8)';
+            btnClose.style.border = 'none';
+            btnClose.style.borderRadius = '50%';
+        }
+    }
 }
 
 function showProjectModal(project) {
     const modalContent = document.getElementById('modalContent');
     const modal = new bootstrap.Modal(document.getElementById('projectModal'));
     
-    // Force apply dark mode styles after modal is created
+    // Apply current theme to modal
     setTimeout(() => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-            const modalElement = document.getElementById('projectModal');
-            const modalContent = modalElement.querySelector('.modal-content');
-            const modalHeader = modalElement.querySelector('.modal-header');
-            const modalBody = modalElement.querySelector('.modal-body');
-            
-            modalContent.style.background = '#0f1729';
-            modalContent.style.color = '#e2e8f0';
-            modalHeader.style.background = '#0f1729';
-            modalHeader.style.color = '#e2e8f0';
-            modalBody.style.background = '#0f1729';
-            modalBody.style.color = '#e2e8f0';
-        }
+        applyModalTheme();
     }, 100);
     
     modalContent.innerHTML = `
