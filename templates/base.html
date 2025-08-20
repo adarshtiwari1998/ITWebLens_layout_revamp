@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="{% block twitter_description %}Leading IT Services and Web Development Agency{% endblock %}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://itweblens.com/assets/img/itweblens-logo-cropped.png">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo-small.png') }}">
     
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
         "@type": "Organization",
         "name": "ITWEBLENS",
         "url": "{{ request.url_root }}",
-        "logo": "https://itweblens.com/assets/img/itweblens-logo-cropped.png",
+        "logo": "{{ url_for('static', filename='images/logo-full.png', _external=True) }}",
         "description": "IT Services and Web Development Agency",
         "address": {
             "@type": "PostalAddress",
@@ -67,7 +67,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top futuristic-nav" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="https://itweblens.com/assets/img/itweblens-logo-cropped.png" alt="ITWEBLENS" height="40" class="logo">
+                <img src="{{ url_for('static', filename='images/logo-full.png') }}" alt="ITWEBLENS" height="40" class="logo">
             </a>
             
             <div class="navbar-controls d-flex align-items-center">
@@ -126,7 +126,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <img src="https://itweblens.com/assets/img/itweblens-logo-cropped.png" alt="ITWEBLENS" height="50" class="mb-3">
+                    <img src="{{ url_for('static', filename='images/logo-full.png') }}" alt="ITWEBLENS" height="50" class="mb-3 footer-logo">
                     <p data-translate="footer.description">We help businesses and brands to grow by leveraging the full benefits of IT Service and Web Development and Designing.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin"></i></a>

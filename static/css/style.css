@@ -1967,3 +1967,50 @@ h1, h2, h3, h4, h5, h6 {
     right: 20px;
   }
 }
+
+/* Logo Styles - Enhanced for new logo */
+.navbar-brand .logo,
+.footer-logo {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+[data-theme="dark"] .navbar-brand .logo,
+[data-theme="dark"] .footer-logo {
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
+}
+
+.navbar-brand .logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(33, 150, 243, 0.3));
+}
+
+[data-theme="dark"] .navbar-brand .logo:hover {
+  filter: drop-shadow(0 4px 8px rgba(33, 150, 243, 0.5));
+}
+
+/* Dark Mode Text Fixes */
+[data-theme="dark"] .futuristic-footer {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .futuristic-footer p,
+[data-theme="dark"] .futuristic-footer h6,
+[data-theme="dark"] .futuristic-footer .list-unstyled li a {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .futuristic-footer h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Footer logo specific styling */
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .footer-logo {
+  opacity: 0.9;
+}
