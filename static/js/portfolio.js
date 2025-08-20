@@ -548,6 +548,24 @@ function showProjectModal(project) {
     const modalContent = document.getElementById('modalContent');
     const modal = new bootstrap.Modal(document.getElementById('projectModal'));
     
+    // Force apply dark mode styles after modal is created
+    setTimeout(() => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            const modalElement = document.getElementById('projectModal');
+            const modalContent = modalElement.querySelector('.modal-content');
+            const modalHeader = modalElement.querySelector('.modal-header');
+            const modalBody = modalElement.querySelector('.modal-body');
+            
+            modalContent.style.background = '#0f1729';
+            modalContent.style.color = '#e2e8f0';
+            modalHeader.style.background = '#0f1729';
+            modalHeader.style.color = '#e2e8f0';
+            modalBody.style.background = '#0f1729';
+            modalBody.style.color = '#e2e8f0';
+        }
+    }, 100);
+    
     modalContent.innerHTML = `
         <div class="project-modal-content">
             <div class="row">

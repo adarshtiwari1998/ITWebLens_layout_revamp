@@ -3184,29 +3184,44 @@ body[data-theme="dark"] .project-modal .modal-title {
   color: #e2e8f0 !important;
 }
 
-/* Additional dark mode overrides */
-body[data-theme="dark"] .modal-content {
-  background: linear-gradient(145deg, 
-    rgba(15, 23, 42, 0.98) 0%, 
-    rgba(30, 41, 59, 0.95) 50%, 
-    rgba(15, 23, 42, 0.98) 100%) !important;
+/* Force dark mode modal with maximum specificity */
+html[data-theme="dark"] .modal-content,
+body[data-theme="dark"] .modal-content,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .project-modal .modal-content {
+  background: #0f1729 !important;
   color: #e2e8f0 !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
 }
 
-body[data-theme="dark"] .modal-header {
-  background: linear-gradient(135deg, 
-    rgba(34, 197, 94, 0.15) 0%, 
-    rgba(139, 92, 246, 0.12) 50%, 
-    rgba(34, 197, 94, 0.15) 100%) !important;
+html[data-theme="dark"] .modal-header,
+body[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .project-modal .modal-header {
+  background: #0f1729 !important;
   border-color: rgba(34, 197, 94, 0.2) !important;
   color: #e2e8f0 !important;
 }
 
-body[data-theme="dark"] .modal-title {
+html[data-theme="dark"] .modal-title,
+body[data-theme="dark"] .modal-title,
+[data-theme="dark"] .modal-title,
+[data-theme="dark"] .project-modal .modal-title {
   color: #e2e8f0 !important;
 }
 
-body[data-theme="dark"] .modal-body {
+html[data-theme="dark"] .modal-body,
+body[data-theme="dark"] .modal-body,
+[data-theme="dark"] .modal-body,
+[data-theme="dark"] .project-modal .modal-body {
+  background: #0f1729 !important;
+  color: #e2e8f0 !important;
+}
+
+html[data-theme="dark"] .project-modal-content,
+body[data-theme="dark"] .project-modal-content,
+[data-theme="dark"] .project-modal-content {
+  background: #0f1729 !important;
   color: #e2e8f0 !important;
 }
 
