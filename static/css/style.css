@@ -168,17 +168,25 @@ h1, h2, h3, h4, h5, h6 {
 .brand-link {
   display: block;
   transition: transform 0.3s ease;
+  background: rgba(248, 250, 252, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .brand-link:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .brand-logo {
-  height: 45px;
+  height: 40px;
   width: auto;
-  filter: brightness(1.1);
-  transition: filter 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
 }
 
 /* Navigation Pills */
@@ -549,6 +557,18 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-theme="light"] .mobile-toggle:hover span {
   background: rgba(0, 0, 0, 0.9);
+}
+
+/* Light theme brand adjustments */
+[data-theme="light"] .brand-link {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .brand-link:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 /* Theme Toggle */
