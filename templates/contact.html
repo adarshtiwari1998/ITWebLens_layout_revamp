@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - ITWEBLENS | Get In Touch{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="page-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <h1 class="hero-title" data-translate="contact.hero.title">Get In <span class="gradient-text">Touch</span></h1>
+                <p class="hero-subtitle" data-translate="contact.hero.subtitle">Let's discuss your next project and bring your ideas to life</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5" data-aos="fade-right">
+                <div class="contact-form-container">
+                    <h3 class="mb-4" data-translate="contact.form.title">Send us a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label" data-translate="contact.form.name">Name *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label" data-translate="contact.form.email">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="company" class="form-label" data-translate="contact.form.company">Company</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="service" class="form-label" data-translate="contact.form.service">Service Interest</label>
+                                <select class="form-control" id="service">
+                                    <option value="" data-translate="contact.form.select_service">Select a service</option>
+                                    <option value="web-development" data-translate="contact.form.web_dev">Web Development</option>
+                                    <option value="it-services" data-translate="contact.form.it_services">IT Services</option>
+                                    <option value="ecommerce" data-translate="contact.form.ecommerce">E-commerce</option>
+                                    <option value="consulting" data-translate="contact.form.consulting">Consulting</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" data-translate="contact.form.message">Message *</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg" data-translate="contact.form.submit">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="mt-3"></div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="contact-info">
+                    <h4 class="mb-4" data-translate="contact.info.title">Contact Information</h4>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6 data-translate="contact.info.headquarters">Headquarters</h6>
+                            <p data-translate="contact.info.address">Tokyo, Japan<br>Serving globally</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6 data-translate="contact.info.email_label">Email</h6>
+                            <p><a href="mailto:hello@itweblens.com">hello@itweblens.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6 data-translate="contact.info.hours">Business Hours</h6>
+                            <p data-translate="contact.info.hours_detail">24/7 Support Available<br>JST: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6 data-translate="contact.info.coverage">Global Coverage</h6>
+                            <p data-translate="contact.info.coverage_detail">US • UK • Japan • Australia • India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="quick-stats mt-5">
+                    <h5 class="mb-3" data-translate="contact.stats.title">Why Choose Us?</h5>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label" data-translate="contact.stats.projects">Projects Delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-translate="contact.stats.clients">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label" data-translate="contact.stats.support">Support Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title" data-translate="contact.faq.title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                <span data-translate="contact.faq.q1">What services do you offer?</span>
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <span data-translate="contact.faq.a1">We offer comprehensive web development services including React, Node.js, Shopify, WordPress development, and enterprise IT services including cloud solutions, virtualization, and IT consulting.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                <span data-translate="contact.faq.q2">How long does a typical project take?</span>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <span data-translate="contact.faq.a2">Project timelines vary based on complexity and requirements. Simple websites typically take 2-4 weeks, while complex applications can take 2-6 months. We provide detailed timelines during the planning phase.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                <span data-translate="contact.faq.q3">Do you provide ongoing support?</span>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <span data-translate="contact.faq.a3">Yes, we offer 24/7 support and maintenance services. Our support includes bug fixes, security updates, performance optimization, and feature enhancements as needed.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                <span data-translate="contact.faq.q4">What is your pricing model?</span>
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <span data-translate="contact.faq.a4">We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Pricing depends on project scope, complexity, and timeline. We provide detailed quotes after understanding your requirements.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-out-cubic'
+    });
+
+    // Contact form submission
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            company: document.getElementById('company').value,
+            service: document.getElementById('service').value,
+            message: document.getElementById('message').value
+        };
+        
+        const messageDiv = document.getElementById('formMessage');
+        
+        try {
+            const response = await fetch('/submit-contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                messageDiv.innerHTML = '<div class="alert alert-success">' + result.message + '</div>';
+                document.getElementById('contactForm').reset();
+            } else {
+                messageDiv.innerHTML = '<div class="alert alert-danger">' + result.message + '</div>';
+            }
+        } catch (error) {
+            messageDiv.innerHTML = '<div class="alert alert-danger">Error submitting form. Please try again.</div>';
+        }
+    });
+</script>
+{% endblock %}
