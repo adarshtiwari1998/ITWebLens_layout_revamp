@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initNewsletterForm();
     initScrollReveal();
+    initPortfolioTabs();
 });
 
 // Scroll Effects
@@ -409,6 +410,52 @@ function initFormValidation() {
 }
 
 initFormValidation();
+
+// Portfolio Showcase Tabs
+function initPortfolioTabs() {
+    const portfolioTabs = document.querySelectorAll('.portfolio-tab');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    if (portfolioTabs.length > 0 && portfolioItems.length > 0) {
+        portfolioTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Remove active class from all tabs
+                portfolioTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Filter portfolio items
+                portfolioItems.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.style.display = 'block';
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Set initial active tab
+        if (portfolioTabs[0]) {
+            portfolioTabs[0].click();
+        }
+    }
+}
 
 // Console welcome message
 console.log(`

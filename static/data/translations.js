@@ -382,25 +382,74 @@ window.translations = {
         
         // Hero Section
         hero: {
-            title: "未来対応技術によるビジネス革命",
-            subtitle: "ITサービスとWebデザイン・開発の利点を最大限に活用し、ビジネスとブランドの成長をサポートします。",
+            tagline: "ITとAIでビジネス成長を架け橋",
+            title: "未来対応AI技術でビジネスを革新",
+            subtitle: "AI駆動のITサービス、Web開発、先進デジタルソリューションの完全な利点を活用して、企業とブランドの成長をサポートします。",
             stat1: "プロジェクト実績",
-            stat2: "満足されたお客様",
+            stat2: "満足なクライアント",
             stat3: "サポート",
-            cta1: "サービスを見る",
-            cta2: "ポートフォリオを見る",
-            card_title: "次世代ソリューション",
-            card_desc: "最先端技術によって強化"
+            cta1: "サービス詳細",
+            cta2: "ポートフォリオ",
+            card_title: "次世代AIソリューション",
+            card_desc: "最先端AI技術による"
+        },
+        
+        // AI Services
+        ai_services: {
+            title: "AI革命をリード",
+            subtitle: "人工知能の力を活用してビジネス運営を変革",
+            ai_agent_title: "AIエージェント",
+            ai_agent_desc: "ワークフローを合理化し、データを分析し、ビジネス成長のためのスマートな意思決定を行うインテリジェント自動化エージェント。",
+            chatbots_title: "AIチャットボット",
+            chatbots_desc: "即座の顧客サポート、リード生成、個人化されたユーザー体験を提供する高度な対話型AI。"
         },
         
         // Services Preview
         services_preview: {
             title: "コアサービス",
             subtitle: "デジタル変革のための包括的ソリューション",
+            ai_title: "AIソリューション",
+            ai_desc: "ビジネスプロセスを自動化・最適化する先進的AIエージェント、チャットボット、機械学習ソリューション",
             webdev_title: "Web開発",
-            webdev_desc: "フルスタック開発、React、Next.js、Node.js、Vue.js、および最新のWeb技術",
+            webdev_desc: "フルスタック開発、React、Next.js、Node.js、Vue.js、現代のWeb技術",
             it_title: "ITサービス",
             it_desc: "クラウドサービス、仮想化、コンサルティングを含むエンタープライズITソリューション"
+        },
+        
+        // Portfolio Showcase
+        portfolio_showcase: {
+            title: "ポートフォリオショーケース",
+            subtitle: "納品したプロジェクトと革新的ソリューションをご覧ください",
+            tab_it: "ITサービスプロジェクト",
+            tab_web: "Web開発",
+            tab_personal: "個人プロジェクト",
+            project1_title: "エンタープライズクラウド移行",
+            project1_desc: "多国籍企業向け完全Azureクラウドインフラ構築",
+            project2_title: "Eコマースプラットフォーム",
+            project2_desc: "AI推奨機能付きNext.jsベースEコマースソリューション",
+            project3_title: "AIアシスタントボット",
+            project3_desc: "自然言語処理機能を持つ個人AIアシスタント",
+            view_all: "完全なポートフォリオを表示"
+        },
+        
+        // Why Choose Us
+        why_choose: {
+            title: "ITWEBLENSを選ぶ理由",
+            subtitle: "最先端のAIとITソリューションでデジタル変革をリード",
+            feature1_title: "2030+未来対応技術",
+            feature1_desc: "AI駆動ソリューションで今日の明日の技術を実装",
+            feature2_title: "グローバル専門知識、ローカル卓越性",
+            feature2_desc: "文化的理解を持って米国、英国、日本、オーストラリアにサービス提供",
+            feature3_title: "エンタープライズグレードセキュリティ",
+            feature3_desc: "高度なセキュリティプロトコルとデータ保護対策",
+            stat1_number: "500+",
+            stat1_label: "プロジェクト実績",
+            stat2_number: "50+",
+            stat2_label: "満足なクライアント",
+            stat3_number: "24/7",
+            stat3_label: "サポート利用可能",
+            stat4_number: "99%",
+            stat4_label: "クライアント満足度"
         },
         
         // Technology Stack
