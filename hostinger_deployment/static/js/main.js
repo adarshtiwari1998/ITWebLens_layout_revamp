@@ -86,17 +86,9 @@ function initNavbar() {
             e.preventDefault();
             e.stopPropagation();
             
-            const isOpen = mobileNav.classList.contains('show');
-            
-            if (isOpen) {
-                // Close menu
-                mobileNav.classList.remove('show');
-                this.classList.remove('active');
-            } else {
-                // Open menu
-                mobileNav.classList.add('show');
-                this.classList.add('active');
-            }
+            // Toggle menu state
+            mobileNav.classList.toggle('show');
+            this.classList.toggle('active');
         });
         
         // Close mobile menu when clicking on a link
