@@ -1,6 +1,6 @@
 from flask import render_template, request, jsonify, make_response, url_for
 from app import app, db
-from models import Contact, Newsletter
+from models import Contact, Newsletter, Testimonial
 from datetime import datetime
 
 @app.route('/')
@@ -26,6 +26,11 @@ def team():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/testimonials')
+def testimonials():
+    testimonials = Testimonial.query.order_by(Testimonial.testimonial_date.desc()).all()
+    return render_template('testimonials.html', testimonials=testimonials)
 
 @app.route('/submit-contact', methods=['POST'])
 def submit_contact():

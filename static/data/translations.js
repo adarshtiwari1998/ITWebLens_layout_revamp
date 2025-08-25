@@ -42,26 +42,31 @@ window.translations = {
             subtitle: "Cutting-edge tools and frameworks we master"
         },
         
-        // Services Showcase
-        showcase: {
-            title: "Comprehensive IT Solutions",
-            subtitle: "Discover our expertise across Web Development, AI Services, and IT Infrastructure",
-            web: {
-                title: "Web Development Excellence",
-                desc: "Modern, scalable web applications built with cutting-edge technologies for optimal performance and user experience."
-            },
-            ai: {
-                title: "AI & Machine Learning",
-                desc: "Advanced AI solutions and machine learning integration to transform your business processes and enhance productivity."
-            },
-            it: {
-                title: "Enterprise IT Infrastructure",
-                desc: "Robust IT infrastructure solutions including cloud services, virtualization, and enterprise-grade security systems."
-            },
-            support: {
-                title: "Global Support & Expertise",
-                desc: "24/7 global support with expertise across multiple regions including US, UK, Japan, Australia, and India."
-            }
+        // Comparison Section
+        comparison: {
+            title: "Why Choose ITWEBLENS Over Others?",
+            subtitle: "Experience the difference with our cutting-edge technology and comprehensive solutions",
+            others_title: "Other IT Service Providers",
+            others_badge: "Basic Services",
+            others_feature1: "Limited to Web Development",
+            others_feature2: "No AI Integration",
+            others_feature3: "Regional Coverage Only",
+            others_feature4: "Standard Security",
+            others_feature5: "9-5 Support",
+            others_feature6: "Legacy Technologies",
+            itweblens_title: "ITWEBLENS",
+            itweblens_badge: "2030+ Future-Ready Solutions",
+            itweblens_feature1: "Full-Stack + AI Services",
+            itweblens_feature2: "Advanced AI Integration",
+            itweblens_feature3: "Global Coverage (US, UK, JP, AU, IN)",
+            itweblens_feature4: "Enterprise-Grade Security",
+            itweblens_feature5: "24/7 Premium Support",
+            itweblens_feature6: "2030+ Future Technologies",
+            tech_title: "Our Technology Edge",
+            tech_subtitle: "What makes ITWEBLENS the future of IT services",
+            web_dev_title: "Web Development",
+            ai_services_title: "AI Services",
+            it_services_title: "IT Infrastructure"
         },
         
         // CTA Section
@@ -476,26 +481,31 @@ window.translations = {
             subtitle: "習得した最先端ツールとフレームワーク"
         },
         
-        // Services Showcase
-        showcase: {
-            title: "包括的なITソリューション",
-            subtitle: "Web開発、AIサービス、ITインフラにおける当社の専門知識をご覧ください",
-            web: {
-                title: "Web開発エクセレンス",
-                desc: "最適なパフォーマンスとユーザーエクスペリエンスのための最先端技術で構築された、現代的でスケーラブルなWebアプリケーション。"
-            },
-            ai: {
-                title: "AI＆機械学習",
-                desc: "ビジネスプロセスを変革し、生産性を向上させる高度なAIソリューションと機械学習統合。"
-            },
-            it: {
-                title: "エンタープライズITインフラ",
-                desc: "クラウドサービス、仮想化、エンタープライズグレードのセキュリティシステムを含む堅牢なITインフラソリューション。"
-            },
-            support: {
-                title: "グローバルサポート＆専門知識",
-                desc: "米国、英国、日本、オーストラリア、インドを含む複数地域での専門知識を持つ24/7グローバルサポート。"
-            }
+        // Global Reach
+        comparison: {
+            title: "なぜ他社よりもITWEBLENSを選ぶのか？",
+            subtitle: "最先端技術と包括的ソリューションの違いを体験してください",
+            others_title: "他のITサービスプロバイダー",
+            others_badge: "基本サービス",
+            others_feature1: "Webデベロップメントに限定",
+            others_feature2: "AI統合なし",
+            others_feature3: "地域カバレッジのみ",
+            others_feature4: "標準セキュリティ",
+            others_feature5: "9-5サポート",
+            others_feature6: "レガシー技術",
+            itweblens_title: "ITWEBLENS",
+            itweblens_badge: "2030+未来対応ソリューション",
+            itweblens_feature1: "フルスタック + AIサービス",
+            itweblens_feature2: "高度なAI統合",
+            itweblens_feature3: "グローバルカバレッジ（US、UK、JP、AU、IN）",
+            itweblens_feature4: "エンタープライズグレードセキュリティ",
+            itweblens_feature5: "24/7プレミアムサポート",
+            itweblens_feature6: "2030+未来技術",
+            tech_title: "私たちの技術的優位性",
+            tech_subtitle: "ITWEBLENSがITサービスの未来である理由",
+            web_dev_title: "Webデベロップメント",
+            ai_services_title: "AIサービス",
+            it_services_title: "ITインフラストラクチャ"
         },
         
         // CTA Section
@@ -854,26 +864,31 @@ window.translations = {
             subtitle: "हमारे द्वारा महारत हासिल किए गए अत्याधुनिक उपकरण और फ्रेमवर्क"
         },
         
-        // Services Showcase
-        showcase: {
-            title: "व्यापक IT समाधान",
-            subtitle: "वेब डेवलपमेंट, AI सेवाओं, और IT अवसंरचना में हमारी विशेषज्ञता की खोज करें",
-            web: {
-                title: "वेब डेवलपमेंट उत्कृष्टता",
-                desc: "इष्टतम प्रदर्शन और उपयोगकर्ता अनुभव के लिए अत्याधुनिक तकनीकों के साथ निर्मित आधुनिक, स्केलेबल वेब एप्लिकेशन।"
-            },
-            ai: {
-                title: "AI और मशीन लर्निंग",
-                desc: "व्यावसायिक प्रक्रियाओं को रूपांतरित करने और उत्पादकता बढ़ाने के लिए उन्नत AI समाधान और मशीन लर्निंग एकीकरण।"
-            },
-            it: {
-                title: "एंटरप्राइज़ IT अवसंरचना",
-                desc: "क्लाउड सेवाओं, वर्चुअलाइज़ेशन, और एंटरप्राइज़-ग्रेड सुरक्षा प्रणालियों सहित मजबूत IT अवसंरचना समाधान।"
-            },
-            support: {
-                title: "वैश्विक सहायता और विशेषज्ञता",
-                desc: "अमेरिका, ब्रिटेन, जापान, ऑस्ट्रेलिया, और भारत सहित कई क्षेत्रों में विशेषज्ञता के साथ 24/7 वैश्विक सहायता।"
-            }
+        // Global Reach
+        comparison: {
+            title: "अन्य कंपनियों की तुलना में ITWEBLENS क्यों चुनें?",
+            subtitle: "अत्याधुनिक तकनीक और व्यापक समाधानों के साथ अंतर का अनुभव करें",
+            others_title: "अन्य IT सेवा प्रदाता",
+            others_badge: "बुनियादी सेवाएं",
+            others_feature1: "केवल वेब डेवलपमेंट तक सीमित",
+            others_feature2: "कोई AI एकीकरण नहीं",
+            others_feature3: "केवल क्षेत्रीय कवरेज",
+            others_feature4: "मानक सुरक्षा",
+            others_feature5: "9-5 सहायता",
+            others_feature6: "पुरानी तकनीकें",
+            itweblens_title: "ITWEBLENS",
+            itweblens_badge: "2030+ भविष्य-तैयार समाधान",
+            itweblens_feature1: "फुल-स्टैक + AI सेवाएं",
+            itweblens_feature2: "उन्नत AI एकीकरण",
+            itweblens_feature3: "वैश्विक कवरेज (US, UK, JP, AU, IN)",
+            itweblens_feature4: "एंटरप्राइज़-ग्रेड सुरक्षा",
+            itweblens_feature5: "24/7 प्रीमियम सहायता",
+            itweblens_feature6: "2030+ भविष्य की तकनीकें",
+            tech_title: "हमारा तकनीकी लाभ",
+            tech_subtitle: "ITWEBLENS IT सेवाओं का भविष्य क्यों है",
+            web_dev_title: "वेब डेवलपमेंट",
+            ai_services_title: "AI सेवाएं",
+            it_services_title: "IT बुनियादी ढांचा"
         },
         
         // CTA Section
