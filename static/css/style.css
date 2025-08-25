@@ -5288,6 +5288,22 @@ body[data-theme="dark"] .project-modal-content,
   color: white !important;
 }
 
+.contact-item:hover .contact-details h6 {
+  color: white !important;
+}
+
+.contact-item:hover .contact-details p {
+  color: white !important;
+}
+
+.contact-item:hover .contact-details a {
+  color: white !important;
+}
+
+.contact-item:hover .contact-icon i {
+  color: white !important;
+}
+
 .contact-item.linkedin {
   background: #0077b5;
   color: white;
