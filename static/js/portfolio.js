@@ -154,8 +154,8 @@ const projects = [
         isNew: true,
         detailedDescription: "Healthcare and Life Sciences Solutions website built with modern web technologies. This comprehensive platform provides medical and pharmaceutical services with a focus on user experience and performance. The website features server-side rendering for optimal SEO performance and uses ImageKit for efficient image delivery. Technologies used: ReactJS for dynamic user interfaces, Vite for fast development and building, NodeJS for backend services, ImageKit for image optimization and delivery, Server-Side Rendering (SSR) for better search engine visibility, and comprehensive SEO implementation for improved online presence.",
         testimonial: {
-            clientName: "Dr. Rajesh Kumar",
-            clientRole: "Medical Director, NIDDIKKARE",
+            clientName: "Dr. Abhishek Chanchal",
+            clientRole: "Director, NIDDIKKARE LLP",
             rating: 5,
             text: "Working with Adarsh on our healthcare platform has been exceptional. His React.js expertise brought our vision to life with clean, professional design. The performance, user experience, and responsive design exceeded our expectations.",
             clientEmail: "info@niddikkare.com",
@@ -181,8 +181,8 @@ const projects = [
         adminLink: "https://niddik.com/admin",
         candidateDashboardLink: "https://niddik.com/candidate/dashboard",
         testimonial: {
-            clientName: "Abhishek Anchal",
-            clientRole: "from NiDDik Kare LLP, Niddik IT",
+            clientName: "Mr. Abhishek Anchal",
+            clientRole: "CEO / Partner",
             rating: 5,
             text: "Adarsh is an exceptional MERN Stack Developer who has been instrumental in building our websites. He integrated advanced features that transformed them into a robust ATS with comprehensive HCM modules. His tagline 'If you imagine, I can implement it with coding' perfectly captures his expertise.",
             clientEmail: "info@niddik.com",
