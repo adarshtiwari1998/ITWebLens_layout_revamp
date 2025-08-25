@@ -5127,6 +5127,31 @@ body[data-theme="dark"] .project-modal-content,
   color: white;
 }
 
+/* Testimonial Star Icon */
+.testimonial-star {
+  color: #ffc107;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: starGlow 2s infinite;
+}
+
+.testimonial-star:hover {
+  color: #ff9800;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+}
+
+@keyframes starGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.8), 0 0 25px rgba(255, 193, 7, 0.4);
+  }
+}
+
 /* Testimonial Modal Styles */
 .testimonial-modal .modal-content {
   background: var(--glass-bg);

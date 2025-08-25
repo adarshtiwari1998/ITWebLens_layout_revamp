@@ -488,7 +488,12 @@ function createProjectCard(project, index) {
                 </div>
             </div>
             <div class="project-content">
-                <h5 class="project-title">${project.title}</h5>
+                <h5 class="project-title">
+                    ${project.title}
+                    ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
+                    <i class="fas fa-star testimonial-star" onclick="showTestimonialModal('${projects.indexOf(project)}')" title="View Client Review"></i>
+                    ` : ''}
+                </h5>
                 <p class="project-description">${project.description}</p>
                 <div class="project-technologies">
                     ${project.technologies.slice(0, 4).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
@@ -517,15 +522,6 @@ function createProjectCard(project, index) {
                     </div>
                 </div>
             </div>
-            ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
-            <div class="testimonial-preview">
-                <button class="btn-review" onclick="showTestimonialModal('${projects.indexOf(project)}')">
-                    <i class="fas fa-star"></i>
-                    <span>View Review</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-            ` : ''}
         </div>
     `;
     
@@ -915,21 +911,17 @@ function createHomeProjectCard(project, index) {
                 </div>
             </div>
             <div class="portfolio-info">
-                <h5>${project.title}</h5>
+                <h5>
+                    ${project.title}
+                    ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
+                    <i class="fas fa-star testimonial-star" onclick="showTestimonialModal(${projects.indexOf(project)})" title="View Client Review"></i>
+                    ` : ''}
+                </h5>
                 <p>${project.description.substring(0, 120)}...</p>
                 <div class="portfolio-tags">
                     ${project.technologies.slice(0, 3).map(tech => `<span class="tag">${tech}</span>`).join('')}
                     ${project.technologies.length > 3 ? `<span class="tag">+${project.technologies.length - 3}</span>` : ''}
                 </div>
-                ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
-                <div class="testimonial-preview home-testimonial">
-                    <button class="btn-review" onclick="showTestimonialModal(${projects.indexOf(project)})">
-                        <i class="fas fa-star"></i>
-                        <span>View Review</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                ` : ''}
             </div>
         </div>
     `;
