@@ -128,71 +128,39 @@
                 <p class="section-subtitle" data-translate="testimonials.more.subtitle">Additional feedback from our diverse client portfolio</p>
             </div>
         </div>
+        {% if testimonials %}
         <div class="row">
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            {% for testimonial in testimonials %}
+            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <div class="stars">
+                            {% for i in range(testimonial.rating) %}
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            {% endfor %}
                         </div>
-                        <p>"Working with ITWEBLENS was a game-changer for our e-commerce business. Their custom Shopify solutions boosted our online sales by 300% within the first quarter."</p>
+                        <p>"{{ testimonial.testimonial_text }}"</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h6>Sarah Mitchell</h6>
-                            <span>CEO, DoubleR Bags</span>
-                            <small>United Kingdom</small>
+                            <h6>{{ testimonial.client_name }}</h6>
+                            <span>{{ testimonial.client_position }}, {{ testimonial.client_company }}</span>
+                            {% if testimonial.location %}
+                            <small>{{ testimonial.location }}</small>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"The AI solutions implemented by ITWEBLENS revolutionized our business operations. The chatbot integration increased customer satisfaction by 250%."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h6>Hiroshi Tanaka</h6>
-                            <span>Technology Director</span>
-                            <small>Japan</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"ITWEBLENS delivered an exceptional IT infrastructure solution that improved our system efficiency by 400% and reduced downtime significantly."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h6>Michael Anderson</h6>
-                            <span>IT Manager</span>
-                            <small>Australia</small>
-                        </div>
-                    </div>
-                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-muted">More testimonials will be displayed here as we receive them from our clients.</p>
             </div>
         </div>
+        {% endif %}
     </div>
 </section>
 
