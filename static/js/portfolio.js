@@ -478,6 +478,12 @@ function createProjectCard(project, index) {
                             <i class="fas fa-external-link-alt"></i>
                             View Project
                         </a>
+                        ${project.testimonial ? `
+                        <button class="btn-action review-btn" onclick="showTestimonialModal('${projects.indexOf(project)}')">
+                            <i class="fas fa-star"></i>
+                            Client Review
+                        </button>
+                        ` : ''}
                     </div>
                 </div>
             </div>
@@ -512,24 +518,12 @@ function createProjectCard(project, index) {
                 </div>
             </div>
             ${project.testimonial ? `
-            <div class="project-testimonial">
-                <div class="testimonial-by">${project.testimonial.clientName}</div>
-                <div class="testimonial-role">${project.testimonial.clientRole}</div>
-                <div class="testimonial-rating">
-                    ${Array.from({length: project.testimonial.rating}, () => '<i class="fas fa-star"></i>').join('')}
-                </div>
-                <div class="testimonial-text">"${project.testimonial.text}"</div>
-                <div class="testimonial-links">
-                    <a href="mailto:${project.testimonial.clientEmail}" class="contact-link">
-                        <i class="fas fa-envelope"></i> ${project.testimonial.clientEmail}
-                    </a>
-                    <a href="tel:${project.testimonial.clientPhone}" class="contact-link">
-                        <i class="fas fa-phone"></i> ${project.testimonial.clientPhone}
-                    </a>
-                    <a href="${project.testimonial.linkedinUrl}" target="_blank" class="linkedin-link">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </div>
+            <div class="testimonial-preview">
+                <button class="btn-review" onclick="showTestimonialModal('${projects.indexOf(project)}')">
+                    <i class="fas fa-star"></i>
+                    <span>View Review</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
             ` : ''}
         </div>
@@ -547,7 +541,7 @@ function openProjectModal(projectIndex) {
 }
 
 function initModal() {
-    // Create modal HTML
+    // Create project modal HTML
     const modalHTML = `
         <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -566,8 +560,28 @@ function initModal() {
         </div>
     `;
     
-    // Append modal to body
+    // Create testimonial modal HTML
+    const testimonialModalHTML = `
+        <div class="modal fade" id="testimonialModal" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content testimonial-modal">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="testimonialModalLabel">Client Testimonial</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="testimonialModalContent">
+                            <!-- Testimonial content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Append modals to body
     document.body.insertAdjacentHTML('beforeend', modalHTML);
+    document.body.insertAdjacentHTML('beforeend', testimonialModalHTML);
     
     // Add event listeners for Learn More buttons
     document.addEventListener('click', function(e) {
@@ -590,6 +604,65 @@ function initModal() {
         }
     });
 }
+
+// Function to show testimonial modal
+function showTestimonialModal(projectIndex) {
+    const project = projects[projectIndex];
+    if (!project || !project.testimonial) return;
+    
+    const testimonial = project.testimonial;
+    const modalContent = document.getElementById('testimonialModalContent');
+    
+    modalContent.innerHTML = `
+        <div class="testimonial-modal-content">
+            <div class="project-info">
+                <h4>${project.title}</h4>
+                <p class="project-url"><a href="${project.url}" target="_blank">${project.url}</a></p>
+            </div>
+            
+            <div class="client-testimonial-full">
+                <div class="testimonial-header">
+                    <div class="client-details">
+                        <h5 class="client-name">${testimonial.clientName}</h5>
+                        <p class="client-role">${testimonial.clientRole}</p>
+                        <div class="testimonial-rating">
+                            ${Array.from({length: testimonial.rating}, () => '<i class="fas fa-star"></i>').join('')}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"${testimonial.text}"</p>
+                </div>
+                
+                <div class="contact-details">
+                    <h6>Contact Information:</h6>
+                    <div class="contact-links">
+                        <a href="mailto:${testimonial.clientEmail}" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>${testimonial.clientEmail}</span>
+                        </a>
+                        <a href="tel:${testimonial.clientPhone}" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>${testimonial.clientPhone}</span>
+                        </a>
+                        <a href="${testimonial.linkedinUrl}" target="_blank" class="contact-item linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Show modal
+    const modal = new bootstrap.Modal(document.getElementById('testimonialModal'));
+    modal.show();
+}
+
+// Global function for onclick handlers
+window.showTestimonialModal = showTestimonialModal;
 
 // Function to apply current theme to modal
 function applyModalTheme() {
@@ -832,6 +905,12 @@ function createHomeProjectCard(project, index) {
                             <i class="fas fa-external-link-alt"></i>
                             View Project
                         </a>
+                        ${project.testimonial ? `
+                        <button class="btn-action review-btn" onclick="showTestimonialModal(${projects.indexOf(project)})">
+                            <i class="fas fa-star"></i>
+                            Client Review
+                        </button>
+                        ` : ''}
                     </div>
                 </div>
             </div>
@@ -842,6 +921,15 @@ function createHomeProjectCard(project, index) {
                     ${project.technologies.slice(0, 3).map(tech => `<span class="tag">${tech}</span>`).join('')}
                     ${project.technologies.length > 3 ? `<span class="tag">+${project.technologies.length - 3}</span>` : ''}
                 </div>
+                ${project.testimonial ? `
+                <div class="testimonial-preview home-testimonial">
+                    <button class="btn-review" onclick="showTestimonialModal(${projects.indexOf(project)})">
+                        <i class="fas fa-star"></i>
+                        <span>View Review</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                ` : ''}
             </div>
         </div>
     `;

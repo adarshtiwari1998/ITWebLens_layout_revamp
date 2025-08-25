@@ -5127,6 +5127,132 @@ body[data-theme="dark"] .project-modal-content,
   color: white;
 }
 
+/* Testimonial Modal Styles */
+.testimonial-modal .modal-content {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+}
+
+.testimonial-modal-content {
+  padding: 1rem;
+}
+
+.project-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.project-info h4 {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.project-url a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.project-url a:hover {
+  text-decoration: underline;
+}
+
+.client-testimonial-full {
+  padding: 1rem 0;
+}
+
+.client-name {
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.client-role {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-rating i {
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--glass-bg);
+  border-radius: 15px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-details h6 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--glass-bg);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  border: 1px solid var(--glass-border);
+}
+
+.contact-item:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateX(5px);
+}
+
+.contact-item.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.contact-item.linkedin:hover {
+  background: #005885;
+  color: white;
+}
+
+.contact-item i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
 /* Responsive Portfolio Design */
 @media (max-width: 768px) {
   .filter-buttons {
