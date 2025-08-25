@@ -2,7 +2,7 @@
 
 class ThemeManager {
     constructor() {
-        this.currentTheme = 'dark'; // Default to dark theme
+        this.currentTheme = 'light'; // Default to light theme
         this.themeToggle = document.getElementById('themeToggle');
         this.systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
         
@@ -21,8 +21,8 @@ class ThemeManager {
         if (saved) {
             this.currentTheme = saved;
         } else {
-            // Use system preference as default
-            this.currentTheme = this.systemPreference.matches ? 'dark' : 'light';
+            // Default to light theme
+            this.currentTheme = 'light';
         }
     }
     

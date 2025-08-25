@@ -85,10 +85,18 @@ function initNavbar() {
         mobileToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            mobileNav.classList.toggle('show');
             
-            // Animate hamburger
-            this.classList.toggle('active');
+            const isOpen = mobileNav.classList.contains('show');
+            
+            if (isOpen) {
+                // Close menu
+                mobileNav.classList.remove('show');
+                this.classList.remove('active');
+            } else {
+                // Open menu
+                mobileNav.classList.add('show');
+                this.classList.add('active');
+            }
         });
         
         // Close mobile menu when clicking on a link
