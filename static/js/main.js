@@ -82,6 +82,7 @@ function initNavbar() {
     
     if (mobileToggle && mobileNav) {
         let isToggling = false;
+        let menuState = 'closed'; // Track menu state explicitly
         
         // Mobile menu toggle
         mobileToggle.addEventListener('click', function(e) {
@@ -92,22 +93,22 @@ function initNavbar() {
             if (isToggling) return;
             isToggling = true;
             
-            const isCurrentlyOpen = mobileNav.classList.contains('show');
-            
-            if (isCurrentlyOpen) {
-                // Close menu
-                mobileNav.classList.remove('show');
-                this.classList.remove('active');
-            } else {
+            if (menuState === 'closed') {
                 // Open menu
                 mobileNav.classList.add('show');
                 this.classList.add('active');
+                menuState = 'open';
+            } else {
+                // Close menu
+                mobileNav.classList.remove('show');
+                this.classList.remove('active');
+                menuState = 'closed';
             }
             
             // Reset toggle flag after animation
             setTimeout(() => {
                 isToggling = false;
-            }, 300);
+            }, 350);
         });
         
         // Close mobile menu when clicking on a link
