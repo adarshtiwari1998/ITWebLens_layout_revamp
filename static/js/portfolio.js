@@ -478,7 +478,7 @@ function createProjectCard(project, index) {
                             <i class="fas fa-external-link-alt"></i>
                             View Project
                         </a>
-                        ${project.testimonial ? `
+                        ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
                         <button class="btn-action review-btn" onclick="showTestimonialModal('${projects.indexOf(project)}')">
                             <i class="fas fa-star"></i>
                             Client Review
@@ -517,7 +517,7 @@ function createProjectCard(project, index) {
                     </div>
                 </div>
             </div>
-            ${project.testimonial ? `
+            ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
             <div class="testimonial-preview">
                 <button class="btn-review" onclick="showTestimonialModal('${projects.indexOf(project)}')">
                     <i class="fas fa-star"></i>
@@ -905,7 +905,7 @@ function createHomeProjectCard(project, index) {
                             <i class="fas fa-external-link-alt"></i>
                             View Project
                         </a>
-                        ${project.testimonial ? `
+                        ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
                         <button class="btn-action review-btn" onclick="showTestimonialModal(${projects.indexOf(project)})">
                             <i class="fas fa-star"></i>
                             Client Review
@@ -921,7 +921,7 @@ function createHomeProjectCard(project, index) {
                     ${project.technologies.slice(0, 3).map(tech => `<span class="tag">${tech}</span>`).join('')}
                     ${project.technologies.length > 3 ? `<span class="tag">+${project.technologies.length - 3}</span>` : ''}
                 </div>
-                ${project.testimonial ? `
+                ${(project.testimonial && (project.title === "NIDDIKKARE" || project.title === "Niddik IT (Recruiting & Job Portal)")) ? `
                 <div class="testimonial-preview home-testimonial">
                     <button class="btn-review" onclick="showTestimonialModal(${projects.indexOf(project)})">
                         <i class="fas fa-star"></i>
