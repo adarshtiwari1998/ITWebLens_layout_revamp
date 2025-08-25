@@ -81,22 +81,43 @@ function initNavbar() {
     window.addEventListener('resize', checkMobileToggleVisibility);
     
     if (mobileToggle && mobileNav) {
+        let isToggling = false;
+        
         // Mobile menu toggle
         mobileToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
-            // Toggle menu state
-            mobileNav.classList.toggle('show');
-            this.classList.toggle('active');
+            // Prevent multiple rapid clicks
+            if (isToggling) return;
+            isToggling = true;
+            
+            const isCurrentlyOpen = mobileNav.classList.contains('show');
+            
+            if (isCurrentlyOpen) {
+                // Close menu
+                mobileNav.classList.remove('show');
+                this.classList.remove('active');
+            } else {
+                // Open menu
+                mobileNav.classList.add('show');
+                this.classList.add('active');
+            }
+            
+            // Reset toggle flag after animation
+            setTimeout(() => {
+                isToggling = false;
+            }, 300);
         });
         
         // Close mobile menu when clicking on a link
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.stopPropagation();
                 mobileNav.classList.remove('show');
                 mobileToggle.classList.remove('active');
+                isToggling = false;
             });
         });
         
@@ -104,10 +125,13 @@ function initNavbar() {
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navbar.contains(event.target);
             const isNavOpen = mobileNav.classList.contains('show');
+            const isClickOnToggle = mobileToggle.contains(event.target);
             
-            if (!isClickInsideNav && isNavOpen) {
+            // Only close if clicking outside and not on the toggle button
+            if (!isClickInsideNav && !isClickOnToggle && isNavOpen) {
                 mobileNav.classList.remove('show');
                 mobileToggle.classList.remove('active');
+                isToggling = false;
             }
         });
         
@@ -116,6 +140,7 @@ function initNavbar() {
             if (event.key === 'Escape' && mobileNav.classList.contains('show')) {
                 mobileNav.classList.remove('show');
                 mobileToggle.classList.remove('active');
+                isToggling = false;
             }
         });
     }
