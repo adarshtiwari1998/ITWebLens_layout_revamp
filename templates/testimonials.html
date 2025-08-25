@@ -119,50 +119,6 @@
     </div>
 </section>
 
-<!-- More Testimonials -->
-<section class="more-testimonials py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title" data-translate="testimonials.more.title">More Client <span class="gradient-text">Reviews</span></h2>
-                <p class="section-subtitle" data-translate="testimonials.more.subtitle">Additional feedback from our diverse client portfolio</p>
-            </div>
-        </div>
-        {% if testimonials %}
-        <div class="row">
-            {% for testimonial in testimonials %}
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            {% for i in range(testimonial.rating) %}
-                            <i class="fas fa-star"></i>
-                            {% endfor %}
-                        </div>
-                        <p>"{{ testimonial.testimonial_text }}"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h6>{{ testimonial.client_name }}</h6>
-                            <span>{{ testimonial.client_position }}, {{ testimonial.client_company }}</span>
-                            {% if testimonial.location %}
-                            <small>{{ testimonial.location }}</small>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="text-muted">More testimonials will be displayed here as we receive them from our clients.</p>
-            </div>
-        </div>
-        {% endif %}
-    </div>
-</section>
 
 <!-- Call to Action -->
 <section class="testimonials-cta py-5">
