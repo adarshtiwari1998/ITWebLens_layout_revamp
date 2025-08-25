@@ -5258,8 +5258,12 @@ body[data-theme="dark"] .project-modal-content,
 
 .contact-item:hover {
   background: var(--primary-blue);
-  color: white;
+  color: white !important;
   transform: translateX(5px);
+}
+
+.contact-item:hover span {
+  color: white !important;
 }
 
 .contact-item.linkedin {

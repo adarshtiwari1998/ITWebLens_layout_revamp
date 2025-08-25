@@ -157,7 +157,7 @@ const projects = [
             clientName: "Dr. Abhishek Chanchal",
             clientRole: "Director, NIDDIKKARE LLP",
             rating: 5,
-            text: "Working with Adarsh on our healthcare platform has been exceptional. His React.js expertise brought our vision to life with clean, professional design. The performance, user experience, and responsive design exceeded our expectations.",
+            text: "Working with Adarsh on our healthcare platform at www.niddikkare.com has been an exceptional experience. His expertise in React.js and modern frontend technologies brought our vision to life with a clean, professional design that perfectly represents our healthcare and life sciences solutions. The website's performance, user experience, and responsive design across all devices exceeded our expectations. Adarsh's attention to detail in healthcare compliance requirements and his ability to translate complex medical concepts into an intuitive user interface is remarkable. The fast loading times and SEO optimization have significantly improved our online presence. We're extremely satisfied with the quality of work and would definitely recommend Adarsh for any healthcare or frontend development project.",
             clientEmail: "info@niddikkare.com",
             clientPhone: "+91 9717312058",
             linkedinUrl: "https://www.linkedin.com/company/niddikkare-llp/"
@@ -184,7 +184,7 @@ const projects = [
             clientName: "Mr. Abhishek Anchal",
             clientRole: "CEO / Partner",
             rating: 5,
-            text: "Adarsh is an exceptional MERN Stack Developer who has been instrumental in building our websites. He integrated advanced features that transformed them into a robust ATS with comprehensive HCM modules. His tagline 'If you imagine, I can implement it with coding' perfectly captures his expertise.",
+            text: "Adarsh is an exceptional MERN Stack Developer who has been instrumental in building our websites, (www.niddik.com). Not only he developed our websites, but he also integrated advanced features that transformed them into a robust Applicant Tracking System (ATS) with comprehensive Human Capital Management (HCM) modules. From Timesheet Management to Candidate Database and Payrolling, Adarsh seamlessly incorporated all the necessary functionalities, showcasing his technical prowess and problem-solving skills. His expertise is truly encapsulated in his tagline: 'If you imagine, I can implement it with coding.' We highly recommend Adarsh for any complex web development project. His dedication, technical expertise, and innovative approach make him an invaluable asset to any team. Thank you, Adarsh, for your outstanding work!",
             clientEmail: "info@niddik.com",
             clientPhone: "+1 (646) 889-9517, +91 9717312058",
             linkedinUrl: "https://www.linkedin.com/company/niddik/"
