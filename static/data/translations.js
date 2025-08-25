@@ -370,6 +370,26 @@ window.translations = {
             }
         },
         
+        // Why Choose Us
+        why_choose: {
+            title: "Why Choose ITWEBLENS",
+            subtitle: "Leading digital transformation with cutting-edge AI and IT solutions",
+            feature1_title: "2030+ Future-Ready Technology",
+            feature1_desc: "Implementing tomorrow's technology today with AI-driven solutions",
+            feature2_title: "Global Expertise, Local Excellence",
+            feature2_desc: "Serving US, UK, Japan, Australia with cultural understanding",
+            feature3_title: "Enterprise-Grade Security",
+            feature3_desc: "Advanced security protocols and data protection measures",
+            stat1_number: "15+",
+            stat1_label: "Projects Delivered",
+            stat2_number: "15+",
+            stat2_label: "Happy Clients",
+            stat3_number: "24/7",
+            stat3_label: "Support Available",
+            stat4_number: "99%",
+            stat4_label: "Client Satisfaction"
+        },
+        
         // CTA Section
         cta: {
             title: "Ready to Transform Your Business with Cutting-Edge IT Solutions?",
