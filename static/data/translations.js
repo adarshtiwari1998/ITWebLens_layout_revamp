@@ -209,7 +209,7 @@ window.translations = {
                 expansion: "Global Expansion",
                 expansion_desc: "Extended services to US, UK, and Australia",
                 growth: "Rapid Growth",
-                growth_desc: "500+ projects delivered successfully"
+                growth_desc: "15+ projects delivered successfully"
             },
             mission: {
                 title: "Our Mission",
@@ -465,9 +465,9 @@ window.translations = {
             feature2_desc: "文化的理解を持って米国、英国、日本、オーストラリアにサービス提供",
             feature3_title: "エンタープライズグレードセキュリティ",
             feature3_desc: "高度なセキュリティプロトコルとデータ保護対策",
-            stat1_number: "500+",
+            stat1_number: "15+",
             stat1_label: "プロジェクト実績",
-            stat2_number: "50+",
+            stat2_number: "15+",
             stat2_label: "満足なクライアント",
             stat3_number: "24/7",
             stat3_label: "サポート利用可能",
@@ -1031,7 +1031,7 @@ window.translations = {
                 expansion: "वैश्विक विस्तार",
                 expansion_desc: "अमेरिका, ब्रिटेन और ऑस्ट्रेलिया में सेवाओं का विस्तार",
                 growth: "तेज़ वृद्धि",
-                growth_desc: "500+ परियोजनाएं सफलतापूर्वक पूरी की गईं"
+                growth_desc: "15+ परियोजनाएं सफलतापूर्वक पूरी की गईं"
             },
             mission: {
                 title: "हमारा मिशन",
