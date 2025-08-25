@@ -60,10 +60,35 @@ function initNavbar() {
     const mobileToggle = document.querySelector('.mobile-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
     
+    // Ensure mobile toggle is visible on mobile devices
+    function checkMobileToggleVisibility() {
+        if (window.innerWidth <= 992) {
+            if (mobileToggle) {
+                mobileToggle.style.display = 'flex';
+            }
+        } else {
+            if (mobileToggle) {
+                mobileToggle.style.display = 'none';
+            }
+            if (mobileNav) {
+                mobileNav.classList.remove('show');
+            }
+        }
+    }
+    
+    // Check on load and resize
+    checkMobileToggleVisibility();
+    window.addEventListener('resize', checkMobileToggleVisibility);
+    
     if (mobileToggle && mobileNav) {
         // Mobile menu toggle
-        mobileToggle.addEventListener('click', function() {
+        mobileToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             mobileNav.classList.toggle('show');
+            
+            // Animate hamburger
+            this.classList.toggle('active');
         });
         
         // Close mobile menu when clicking on a link
@@ -71,6 +96,7 @@ function initNavbar() {
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('show');
+                mobileToggle.classList.remove('active');
             });
         });
         
@@ -81,6 +107,15 @@ function initNavbar() {
             
             if (!isClickInsideNav && isNavOpen) {
                 mobileNav.classList.remove('show');
+                mobileToggle.classList.remove('active');
+            }
+        });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileNav.classList.contains('show')) {
+                mobileNav.classList.remove('show');
+                mobileToggle.classList.remove('active');
             }
         });
     }
