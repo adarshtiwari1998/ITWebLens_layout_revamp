@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ITWEBLENS | Comprehensive IT Solutions</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ITWEBLENS - Leading IT Services and Web Development Agency. We help businesses grow with cutting-edge technology solutions including React, Node.js, Shopify, and more.">
+    <meta name="keywords" content="IT Services, Web Development, React, Node.js, Shopify, WordPress, Full Stack Development, Japan, US, UK, Australia">
+    <meta name="author" content="ITWEBLENS">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ITWEBLENS - Futuristic IT Services">
+    <meta property="og:description" content="Leading IT Services and Web Development Agency targeting US, UK, Japan, Australia with cutting-edge solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="ITWEBLENS">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ITWEBLENS - Futuristic IT Services">
+    <meta name="twitter:description" content="Leading IT Services and Web Development Agency">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/images/logo-small.png">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ITWEBLENS",
+        "url": "",
+        "logo": "",
+        "description": "IT Services and Web Development Agency",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Japan"
+        },
+        "sameAs": [
+            ""
+        ]
+    }
+    </script>
+    
+    
+</head>
+<body>
+    <!-- Modern 2030+ Navigation -->
+    <nav class="modern-nav fixed-top" id="mainNav">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="static/images/logo-full.png" alt="ITWEBLENS" class="brand-logo">
+                </a>
+            </div>
+            
+            <!-- Main Navigation Pills -->
+            <div class="nav-center">
+                <div class="nav-pills-container">
+                    <div class="nav-pills">
+                        <a href="index.html" class="nav-pill" data-translate="nav.home">Home</a>
+                        <a href="services.html" class="nav-pill" data-translate="nav.services">Services</a>
+                        <a href="portfolio.html" class="nav-pill" data-translate="nav.portfolio">Portfolio</a>
+                        <a href="testimonials.html" class="nav-pill" data-translate="nav.testimonials">Testimonials</a>
+                        <a href="about.html" class="nav-pill" data-translate="nav.about">About</a>
+                        <a href="team.html" class="nav-pill" data-translate="nav.team">Team</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Controls -->
+            <div class="nav-controls">
+                <!-- Language & Theme Group -->
+                <div class="control-group">
+                    <div class="language-switcher-2030">
+                        <div class="lang-dropdown" id="languageDropdown">
+                            <div class="lang-current" id="langCurrent">
+                                <span class="lang-flag">🇺🇸</span>
+                                <span class="lang-code">EN</span>
+                                <i class="fas fa-chevron-down lang-arrow"></i>
+                            </div>
+                            <div class="lang-options" id="langOptions">
+                                <div class="lang-option" data-lang="en" data-flag="🇺🇸" data-code="EN">
+                                    <span class="lang-flag">🇺🇸</span>
+                                    <span class="lang-name">English</span>
+                                </div>
+                                <div class="lang-option" data-lang="ja" data-flag="🇯🇵" data-code="JP">
+                                    <span class="lang-flag">🇯🇵</span>
+                                    <span class="lang-name">日本語</span>
+                                </div>
+                                <div class="lang-option" data-lang="hi" data-flag="🇮🇳" data-code="HI">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">हिंदी</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="theme-toggle-modern" id="themeToggle">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="nav-cta">
+                    <a href="contact.html" class="cta-button" data-translate="nav.get_started">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <button class="mobile-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="collapse mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <a href="index.html" class="mobile-nav-link" data-translate="nav.home">Home</a>
+                    <a href="services.html" class="mobile-nav-link" data-translate="nav.services">Services</a>
+                    <a href="portfolio.html" class="mobile-nav-link" data-translate="nav.portfolio">Portfolio</a>
+                    <a href="about.html" class="mobile-nav-link" data-translate="nav.about">About</a>
+                    <a href="team.html" class="mobile-nav-link" data-translate="nav.team">Team</a>
+                    <a href="contact.html" class="mobile-nav-link cta-mobile" data-translate="nav.contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+<section class="page-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <h1 class="hero-title" data-translate="services.hero.title">Our <span class="gradient-text">Services</span></h1>
+                <p class="hero-subtitle" data-translate="services.hero.subtitle">Comprehensive IT solutions tailored for the future</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Web Development Services -->
+<section class="services-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center" data-translate="services.webdev.title">Web Development <span class="gradient-text">Excellence</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card-detailed">
+                    <div class="service-header">
+                        <i class="fab fa-react"></i>
+                        <h4 data-translate="services.webdev.react.title">React Development</h4>
+                    </div>
+                    <p data-translate="services.webdev.react.desc">Modern, scalable React applications with optimal performance and user experience.</p>
+                    <ul class="service-features">
+                        <li>Single Page Applications</li>
+                        <li>Component-based Architecture</li>
+                        <li>State Management (Redux/Context)</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card-detailed">
+                    <div class="service-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h4 data-translate="services.webdev.nextjs.title">Next.js Solutions</h4>
+                    </div>
+                    <p data-translate="services.webdev.nextjs.desc">Server-side rendered applications with superior SEO and performance optimization.</p>
+                    <ul class="service-features">
+                        <li>Server-Side Rendering</li>
+                        <li>Static Site Generation</li>
+                        <li>API Routes</li>
+                        <li>Image Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card-detailed">
+                    <div class="service-header">
+                        <i class="fab fa-node-js"></i>
+                        <h4 data-translate="services.webdev.nodejs.title">Node.js Backend</h4>
+                    </div>
+                    <p data-translate="services.webdev.nodejs.desc">Robust backend solutions with Express.js, APIs, and database integration.</p>
+                    <ul class="service-features">
+                        <li>RESTful APIs</li>
+                        <li>GraphQL Integration</li>
+                        <li>Database Design</li>
+                        <li>Authentication Systems</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card-detailed">
+                    <div class="service-header">
+                        <i class="fab fa-shopify"></i>
+                        <h4 data-translate="services.webdev.shopify.title">Shopify Development</h4>
+                    </div>
+                    <p data-translate="services.webdev.shopify.desc">Custom Shopify stores and applications for e-commerce success.</p>
+                    <ul class="service-features">
+                        <li>Custom Theme Development</li>
+                        <li>Shopify App Development</li>
+                        <li>Payment Integration</li>
+                        <li>Store Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-card-detailed">
+                    <div class="service-header">
+                        <i class="fab fa-wordpress"></i>
+                        <h4 data-translate="services.webdev.wordpress.title">WordPress Solutions</h4>
+                    </div>
+                    <p data-translate="services.webdev.wordpress.desc">Custom WordPress development and management services.</p>
+                    <ul class="service-features">
+                        <li>Custom Plugin Development</li>
+                        <li>Theme Customization</li>
+                        <li>Site Migration</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-card-detailed">
+                    <div class="service-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4 data-translate="services.webdev.ecommerce.title">E-commerce Solutions</h4>
+                    </div>
+                    <p data-translate="services.webdev.ecommerce.desc">Complete e-commerce platforms with advanced features and integrations.</p>
+                    <ul class="service-features">
+                        <li>Multi-vendor Platforms</li>
+                        <li>Payment Gateways</li>
+                        <li>Inventory Management</li>
+                        <li>Mobile Commerce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IT Services -->
+<section class="it-services-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5" data-aos="fade-up">
+                <h2 class="section-title text-center" data-translate="services.it.title">Enterprise <span class="gradient-text">IT Services</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="it-service-card">
+                    <div class="it-service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h5 data-translate="services.it.citrix.title">Citrix Solutions</h5>
+                    <p data-translate="services.it.citrix.desc">Virtual desktop infrastructure and application delivery solutions.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="it-service-card">
+                    <div class="it-service-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h5 data-translate="services.it.nutanix.title">Nutanix Infrastructure</h5>
+                    <p data-translate="services.it.nutanix.desc">Hyper-converged infrastructure solutions for modern data centers.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="it-service-card">
+                    <div class="it-service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h5 data-translate="services.it.vmware.title">VMware Solutions</h5>
+                    <p data-translate="services.it.vmware.desc">Virtualization and cloud infrastructure management.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="it-service-card">
+                    <div class="it-service-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h5 data-translate="services.it.azure.title">Azure Services</h5>
+                    <p data-translate="services.it.azure.desc">Microsoft Azure cloud solutions and migration services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title" data-translate="services.process.title">Our <span class="gradient-text">Development Process</span></h2>
+                <p class="section-subtitle" data-translate="services.process.subtitle">Streamlined workflow for exceptional results</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h5 data-translate="services.process.step1.title">Discovery</h5>
+                    <p data-translate="services.process.step1.desc">Understanding your business needs and project requirements.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h5 data-translate="services.process.step2.title">Planning</h5>
+                    <p data-translate="services.process.step2.desc">Strategic planning and architecture design for optimal results.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h5 data-translate="services.process.step3.title">Development</h5>
+                    <p data-translate="services.process.step3.desc">Agile development with regular updates and feedback loops.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h5 data-translate="services.process.step4.title">Deployment</h5>
+                    <p data-translate="services.process.step4.desc">Seamless deployment with ongoing support and maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-background">
+            <div class="cta-shape shape-1"></div>
+            <div class="cta-shape shape-2"></div>
+            <div class="cta-shape shape-3"></div>
+            <div class="cta-shape shape-4"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="cta-title" data-translate="cta.title">Ready to experience smarter & more accurate AI answers?</h2>
+                    <p class="cta-subtitle" data-translate="cta.subtitle">Gain an edge with our exclusive services, designed to provide you with tailored insights and guidance across every industry and subject.</p>
+                    <div class="cta-button-container">
+                        <a href="contact.html" class="cta-button-main" data-translate="cta.button">
+                            <span>Get Started Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="futuristic-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="static/images/logo-full.png" alt="ITWEBLENS" class="footer-logo">
+                    <p data-translate="footer.description">We help businesses and brands to grow by leveraging the full benefits of IT Service and Web Development and Designing.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 data-translate="footer.services">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" data-translate="footer.webdev">Web Development</a></li>
+                        <li><a href="services.html" data-translate="footer.itservices">IT Services</a></li>
+                        <li><a href="services.html" data-translate="footer.shopify">Shopify Development</a></li>
+                        <li><a href="services.html" data-translate="footer.wordpress">WordPress</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 data-translate="footer.company">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" data-translate="footer.about">About Us</a></li>
+                        <li><a href="team.html" data-translate="footer.team">Our Team</a></li>
+                        <li><a href="portfolio.html" data-translate="footer.portfolio">Portfolio</a></li>
+                        <li><a href="contact.html" data-translate="footer.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 data-translate="footer.newsletter">Newsletter</h6>
+                    <p data-translate="footer.newsletter_desc">Stay updated with our latest projects and insights.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" data-translate-placeholder="footer.email_placeholder" required>
+                            <button class="btn btn-primary" type="submit" data-translate="footer.subscribe">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 ITWEBLENS. <span data-translate="footer.rights">All rights reserved.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="/sitemap.xml" class="me-3">Sitemap</a>
+                    <span data-translate="footer.made_with">Made with</span> ❤️ <span data-translate="footer.in_japan">in Japan</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/data/translations.js"></script>
+    <script src="static/js/language.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/portfolio.js"></script>
+    <script src="static/js/main.js"></script>
+    
+    <script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-out-cubic'
+    });
+</script>
+</body>
+</html>
