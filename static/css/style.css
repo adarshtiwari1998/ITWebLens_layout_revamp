@@ -956,7 +956,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-subtitle {
   font-size: 1.2rem;
   color: var(--text-secondary);
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem auto;
   max-width: 600px;
   line-height: 1.6;
 }
