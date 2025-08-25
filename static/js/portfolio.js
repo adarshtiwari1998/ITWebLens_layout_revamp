@@ -152,7 +152,16 @@ const projects = [
         maintenanceMode: "Active",
         projectType: "Healthcare",
         isNew: true,
-        detailedDescription: "Healthcare and Life Sciences Solutions website built with modern web technologies. This comprehensive platform provides medical and pharmaceutical services with a focus on user experience and performance. The website features server-side rendering for optimal SEO performance and uses ImageKit for efficient image delivery. Technologies used: ReactJS for dynamic user interfaces, Vite for fast development and building, NodeJS for backend services, ImageKit for image optimization and delivery, Server-Side Rendering (SSR) for better search engine visibility, and comprehensive SEO implementation for improved online presence."
+        detailedDescription: "Healthcare and Life Sciences Solutions website built with modern web technologies. This comprehensive platform provides medical and pharmaceutical services with a focus on user experience and performance. The website features server-side rendering for optimal SEO performance and uses ImageKit for efficient image delivery. Technologies used: ReactJS for dynamic user interfaces, Vite for fast development and building, NodeJS for backend services, ImageKit for image optimization and delivery, Server-Side Rendering (SSR) for better search engine visibility, and comprehensive SEO implementation for improved online presence.",
+        testimonial: {
+            clientName: "Dr. Rajesh Kumar",
+            clientRole: "Medical Director, NIDDIKKARE",
+            rating: 5,
+            text: "Working with Adarsh on our healthcare platform has been exceptional. His React.js expertise brought our vision to life with clean, professional design. The performance, user experience, and responsive design exceeded our expectations.",
+            clientEmail: "info@niddikkare.com",
+            clientPhone: "+91 9717312058",
+            linkedinUrl: "https://www.linkedin.com/company/niddikkare-llp/"
+        }
     },
     {
         title: "Niddik IT (Recruiting & Job Portal)",
@@ -170,7 +179,16 @@ const projects = [
         isNew: true,
         detailedDescription: "Comprehensive Full Stack job recruiting platform built with modern technologies. This 35+ page website includes a complete recruitment ecosystem with advanced features. The Admin Dashboard provides comprehensive control over job postings, candidate management, company profiles, application tracking, and real-time analytics.",
         adminLink: "https://niddik.com/admin",
-        candidateDashboardLink: "https://niddik.com/candidate/dashboard"
+        candidateDashboardLink: "https://niddik.com/candidate/dashboard",
+        testimonial: {
+            clientName: "Abhishek Anchal",
+            clientRole: "from NiDDik Kare LLP, Niddik IT",
+            rating: 5,
+            text: "Adarsh is an exceptional MERN Stack Developer who has been instrumental in building our websites. He integrated advanced features that transformed them into a robust ATS with comprehensive HCM modules. His tagline 'If you imagine, I can implement it with coding' perfectly captures his expertise.",
+            clientEmail: "info@niddik.com",
+            clientPhone: "+1 (646) 889-9517, +91 9717312058",
+            linkedinUrl: "https://www.linkedin.com/company/niddik/"
+        }
     },
     {
         title: "DoubleR Bags Corporate",
@@ -493,6 +511,27 @@ function createProjectCard(project, index) {
                     </div>
                 </div>
             </div>
+            ${project.testimonial ? `
+            <div class="project-testimonial">
+                <div class="testimonial-by">${project.testimonial.clientName}</div>
+                <div class="testimonial-role">${project.testimonial.clientRole}</div>
+                <div class="testimonial-rating">
+                    ${Array.from({length: project.testimonial.rating}, () => '<i class="fas fa-star"></i>').join('')}
+                </div>
+                <div class="testimonial-text">"${project.testimonial.text}"</div>
+                <div class="testimonial-links">
+                    <a href="mailto:${project.testimonial.clientEmail}" class="contact-link">
+                        <i class="fas fa-envelope"></i> ${project.testimonial.clientEmail}
+                    </a>
+                    <a href="tel:${project.testimonial.clientPhone}" class="contact-link">
+                        <i class="fas fa-phone"></i> ${project.testimonial.clientPhone}
+                    </a>
+                    <a href="${project.testimonial.linkedinUrl}" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            ` : ''}
         </div>
     `;
     
